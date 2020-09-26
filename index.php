@@ -1,4 +1,8 @@
 <?php
+
+echo 'It worked';
+
+die();
 /**
 * Database file include
 */
