@@ -47,6 +47,8 @@ $string = $pass;
 $encriptado = encriptar($action, $string);
 
 echo $encriptado;
+echo 'test5';
+
 
 
 ?>
