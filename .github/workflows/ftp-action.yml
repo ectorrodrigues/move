@@ -13,4 +13,4 @@ jobs:
       with:
         ftp-server: ftp://ftp.movedl.com/
         ftp-username: movedl33_up@movedl.com
-        ftp-password: #Avantemova2016
+        ftp-password: "#Avantemova2016"
