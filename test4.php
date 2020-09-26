@@ -34,6 +34,6 @@ $action = 'encrypt';
 $string = 'Avantemova2017';
 $encriptado = encriptar($action, $string, $key_sk, $key_siv);
 
-echo 'test';
+echo 'test4';
 
 ?>
