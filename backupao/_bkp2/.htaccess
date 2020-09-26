@@ -1,0 +1,78 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+##RewriteCond %{HTTPS} !=on
+##RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+##SITE
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^search/([a-z0-9]+)/([a-z0-9]+)/?$ index.php?page=produtos&search=$1&pagination=$2
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^([a-z]+)/?$ index.php?page=$1
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^([a-z0-9]+)/item/([a-z0-9]+)/(.*)/?$ index.php?page=$1&id=$2
+
+
+##ADMIN
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^admin/?$ /app/webroot/login.php
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^admin/([a-z0-9]+)/?$ index.php?page=admin&id=$1
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^admin/add/([a-z0-9]+)$/? index.php?page=admin&id=$1&action=add
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^admin/edit/([a-z0-9]+)/([a-z0-9]+)$/? index.php?page=admin&id=$1&item=$2&action=edit
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^admin/model/([a-z0-9]+)/([a-z0-9]+)/([a-z0-9]+)/?$ app/model/AdminModel.php?page=admin&action=$1&id=$2&item=$3
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^dl/([a-z0-9]+)/(.*)/?$ result.php?user=$1&link=$2
+
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|gif|jpg|jpeg|png)$">
+          Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+          Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+</IfModule>
+
+##ExpiresActive On
+##ExpiresByType image/jpg "access 1 year"
+##ExpiresByType image/jpeg "access 1 year"
+##ExpiresByType image/gif "access 1 year"
+##ExpiresByType image/png "access 1 year"
+##ExpiresByType text/css "access 1 month"
+##ExpiresByType text/html "access 1 month"
+##ExpiresByType application/pdf "access 1 month"
+##ExpiresByType text/x-javascript "access 1 month"
+##ExpiresByType application/x-shockwave-flash "access 1 month"
+##ExpiresByType image/x-icon "access 1 year"
+##ExpiresDefault "access 1 month"
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Defina o pacote “ea-php72” como a linguagem padrão de programação “PHP”.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
