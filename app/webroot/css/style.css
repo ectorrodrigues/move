@@ -1,0 +1,379 @@
+body{
+  font-size: 18px;
+  height: 100%;
+  background: rgb(44,39,76);
+  background: linear-gradient(45deg, rgba(44,39,76,1) 0%, rgba(255,0,97,0.9962359943977591) 100%);
+  color: #fff;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tel]{
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 15px 25px;
+}
+
+.text-default{
+  font-size: 24px;
+}
+
+.socialmedia{
+  width: 100%;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: #666;
+  text-align: center;
+}
+
+.btn{
+  border-color: #fff;
+  border-style: solid;
+  border-width: 2px;
+  color: #fff;
+  border-radius: 60px;
+  padding: 15px 45px;
+}
+
+.btn:hover{
+  font-weight: 700;
+  color: #fff;
+  border-width: 3px;
+}
+
+.transition{
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+h1{
+  text-align: center;
+  font-weight: 300;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+h2{
+  font-size: 26px;
+  font-weight: 700;
+}
+
+
+.container-fluid{
+  /* min-height: 1000px; */
+}
+
+.small{
+  font-size: 13px;
+  line-height: 22px;
+}
+
+button{
+  background-color: transparent;
+  color:#fff;
+  padding: 30px 85px;
+  border-color: #fff;
+  border-radius: 90px;
+  border-width: 4px;
+}
+
+.logo{
+  flex: 0 0 10%;
+  max-width: 10%;
+}
+
+.socialmedias {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socialmedias:after {
+  content: "";
+  clear: both;
+}
+
+.socialmediasli {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+
+}
+
+.socialmediasli label {
+  bottom: 1px;
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  left: 1px;
+  position: absolute;
+  right: 1px;
+  text-indent: 100%;
+  top: 1px;
+}
+
+.socialmediasli + .socialmediasli {
+  margin: 0 10px;
+}
+
+.instagram label {
+  background-image: url('../files/ig-logo-01.png');
+}
+
+.facebook label {
+  background-image: url('../files/fb-logo-01.png');
+}
+
+
+.socialmedias input:focus + label {
+
+  margin-bottom: 8px;
+  margin-top: -8px;
+
+  -webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.socialmedias input:checked + label {
+}
+
+
+.imageRot {
+   -webkit-animation:spin 1s ease-in-out;
+    -moz-animation:spin 1s ease-in-out;
+    animation:spin 1s ease-in-out;
+}
+@-moz-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+@keyframes spin {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+
+hr{
+  border-color: #fff;
+  border-width: 1px;
+  opacity: 0.3;
+}
+
+.form input, .form label{
+  display: block;
+}
+
+.form input{
+  width: 100%;
+  border:none;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.form label{
+  margin: 25px 0 4px 0;
+  padding-left: 10px;
+  color: #333;
+}
+
+.form .btn{
+  font-weight: 700;
+  color: #333;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #333;
+}
+
+.form .btn:hover{
+  font-weight: 700;
+  color: #111;
+  border-width: 3px;
+}
+
+.history input, .form input{
+  width: 100%;
+  border:none;
+  border-radius: 16px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+}
+
+.history .fa-clone:hover{
+  font-weight: 900;
+}
+
+.menu_admin{
+  /* background-color: #222; */
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ddd;
+}
+
+.menu_admin div a i{
+  color:#fff;
+}
+
+.menu_admin div a i:hover{
+  color:#999 !important;
+}
+
+.hr-border{
+  border-bottom:solid;
+  border-bottom-style: solid;
+  border-bottom-color: #ddd;
+  border-bottom-width: 1px;
+}
+
+.separator{
+  margin: 0 10px;
+}
+
+.filters{
+  font-size: 15px;
+}
+
+.filters span{
+  cursor: pointer;
+}
+
+.filters span:hover{
+  color:#999;
+}
+
+.box-home{
+  background-color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  color: #666;
+}
+
+.box-home .btn{
+  border-color: #333;
+  border-style: solid;
+  border-width: 2px;
+  color: #333;
+  border-radius: 60px;
+  padding: 15px 45px;
+}
+
+.plan-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.price{
+  text-align: center;
+  font-weight: 300;
+  font-size: 40px;
+  letter-spacing: 0px;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+**********************************************************************************************************
+                                         MOBILE STYLING
+**********************************************************************************************************               ----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (min-device-width: 10px) and (max-device-width: 575px) {
+
+  body{
+    font-size: 3em;
+  }
+
+  input[type=text], input[type=password]{
+    font-size: 1em;
+    border-radius: 40px;
+  }
+
+  input[type=text], select{
+    padding-left: 50px;
+  }
+
+  .text-default{
+    font-size: 1.25em;
+  }
+
+  .socialmedia{
+    font-size: 1em;
+    border-radius: 40px;
+  }
+
+  .btn{
+    font-size: 1em;
+    text-align: center;
+    padding: 30px 85px;
+    border-radius: 90px;
+    border-width: 4px;
+  }
+
+  h1{
+    font-size: 1.75em;
+    margin-top: 100px;
+  }
+
+  h2{
+    font-size: 1.3em;
+    margin: 30px 0 30px 0;
+  }
+
+  .container-fluid{
+    /*min-height: 2000px;*/
+  }
+
+  .small{
+    font-size: 0.7em;
+    line-height: 1.5em;
+  }
+
+  .logo{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .socialmediasli {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    position: relative;
+  }
+
+  .socialmediasli label {
+    zoom:2;
+  }
+
+  .history{
+    padding-bottom: 50px;
+  }
+
+  .history .infos{
+    font-size: 33px;
+  }
+
+  .filters{
+    text-align: center !important;
+    font-size: 1em;
+  }
+
+  .separator{
+    margin: 0 30px;
+  }
+
+}

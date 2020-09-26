@@ -1,0 +1,12 @@
+3424H0K0eFrt2L10
+
+
+22111944785
+27/10/1987
+
+
+https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=95BFD14AC6C64E6224A68F9B96DD86B1
+
+
+
+https://ws.sandbox.pagseguro.uol.com.br/v3/transactions/FB3652249EEF47839F517F05CC3362CA?email=movedeeplink@gmail.com&token=DB01CE92BEBF4455A0CE1ABDD9FCF901

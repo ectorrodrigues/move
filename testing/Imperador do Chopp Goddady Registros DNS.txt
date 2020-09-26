@@ -1,0 +1,66 @@
+ns81.domaincontrol.com
+ns82.domaincontrol.com
+
+
+277784055
+
+PIN 1220
+
+
+A @ 107.180.12.120 TTL-3600
+A admin 107.180.12.120 TTL-3600
+A mail 107.180.12.120 TTL_3600
+
+
+
+
+
+In order to connect your doman with the hosting please update this records in your domain
+Neha Nath at 16:23, Sep 10:
+https://myh.godaddy.com/?pl_id=1&prog_id=GoDaddy#/hosting/cpanel/account/eb1ba85b-9473-11ea-81fa-3417ebe73f23
+Sisa Academy at 16:26, Sep 10:
+Which records are you refering to?
+Read
+Sisa Academy at 16:27, Sep 10:
+Add this DNS records on registro.br:
+Read
+Sisa Academy at 16:27, Sep 10:
+ns81.domaincontrol.com
+Read
+Sisa Academy at 16:27, Sep 10:
+?
+Read
+Neha Nath at 16:29, Sep 10:
+just asec
+Sisa Academy at 16:30, Sep 10:
+ok
+Read
+Neha Nath at 16:33, Sep 10:
+could you please tell me where you have registered this domain -imperadordochopp.com.br
+Neha Nath at 16:33, Sep 10:
+yo need to go to your domain's DNS
+Neha Nath at 16:33, Sep 10:
+and need to update record
+Neha Nath at 16:33, Sep 10:
+A records and c name records
+Neha Nath at 16:34, Sep 10:
+A @ 107.180.12.120 TTL-3600
+Neha Nath at 16:34, Sep 10:
+A admin 107.180.12.120 TTL-3600
+Neha Nath at 16:35, Sep 10:
+A mail 107.180.12.120 TTL_3600
+Sisa Academy at 16:36, Sep 10:
+I added all this A records now
+Read
+Neha Nath at 16:37, Sep 10:
+just a sec there are few more
+Neha Nath at 16:37, Sep 10:
+CNAME www imperadordochopp.com.br
+TTL_3600
+Neha Nath at 16:38, Sep 10:
+CNAME cpanel imperadordochopp.com.br TTL-3600
+Neha Nath at 16:40, Sep 10:
+CNAME webdisk imperadordochopp.com.br TTL- 3600
+CNAME whm imperadordochopp.com.br TTL-3600
+CNAME www.admin imperadordochopp.com.br TTL-3600
+CNAME webdisk.admin imperadordochopp.com.br TTL-3600

@@ -1,0 +1,442 @@
+[18-Sep-2020 02:14:52] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 03:47:14] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 05:18:30] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 05:18:30] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 05:24:46] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 07:06:48] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 07:06:48] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 07:06:49] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 07:50:26] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 08:05:27] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 08:34:12] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 09:35:45] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 12:21:29] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 12:21:33] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 12:21:39] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 12:25:32] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 14:26:43] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 14:26:43] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 14:26:45] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 15:37:10] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 16:10:12] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 16:36:20 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 16:36:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 16:36:44 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:08:32 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:08:48 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:09:53 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:01 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:18 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:19 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:20 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:20 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', ' ORDER BY id', ' DESC ', ' LIMIT 12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page('home', 'index.php')
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 17:10:24 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:24 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:26 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', ' ORDER BY id', ' DESC ', ' LIMIT 12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page('home', 'index.php')
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 17:10:31 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:38 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:52 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:10:56 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:11:10 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:11:35 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:11:39 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:15:15 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:25:03 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:25:03 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 17:31:37 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Sep-2020 19:33:46] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Opening and ending tag mismatch: HR line 1 and body in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:33:46] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: urce ().&lt;/u&gt;&lt;/p&gt;&lt;HR size=&quot;1&quot; noshade=&quot;noshade&quot;&gt;&lt;h3&gt;JBossWeb/2.0.1.GA&lt;/h3&gt;&lt;/body&gt; in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:33:46] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]:                                                                                ^ in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:33:46] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Opening and ending tag mismatch: HR line 1 and html in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:33:46] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Premature end of data in tag body line 1 in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:33:46] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Premature end of data in tag html line 1 in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:34:55] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Opening and ending tag mismatch: HR line 1 and body in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:34:55] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: urce ().&lt;/u&gt;&lt;/p&gt;&lt;HR size=&quot;1&quot; noshade=&quot;noshade&quot;&gt;&lt;h3&gt;JBossWeb/2.0.1.GA&lt;/h3&gt;&lt;/body&gt; in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:34:55] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]:                                                                                ^ in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:34:55] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Opening and ending tag mismatch: HR line 1 and html in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:34:55] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Premature end of data in tag body line 1 in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:34:55] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Premature end of data in tag html line 1 in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:35:52] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Opening and ending tag mismatch: HR line 1 and body in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:35:52] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: urce ().&lt;/u&gt;&lt;/p&gt;&lt;HR size=&quot;1&quot; noshade=&quot;noshade&quot;&gt;&lt;h3&gt;JBossWeb/2.0.1.GA&lt;/h3&gt;&lt;/body&gt; in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:35:52] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]:                                                                                ^ in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:35:52] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Opening and ending tag mismatch: HR line 1 and html in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:35:52] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Premature end of data in tag body line 1 in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:35:52] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Premature end of data in tag html line 1 in /home2/movedl33/public_html/checkout.php on line 16
+[18-Sep-2020 19:37:13] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[18-Sep-2020 19:39:10] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Start tag expected, '&lt;' not found in /home2/movedl33/public_html/checkout.php on line 18
+[18-Sep-2020 19:39:10] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Unauthorized in /home2/movedl33/public_html/checkout.php on line 18
+[18-Sep-2020 19:39:10] PHP Warning:  simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: ^ in /home2/movedl33/public_html/checkout.php on line 18
+[18-Sep-2020 22:51:15] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[19-Sep-2020 00:41:15] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'movedl33_db.portfolio' doesn't exist' in /home2/movedl33/public_html/app/model/AppModel.php:418
+Stack trace:
+#0 /home2/movedl33/public_html/app/model/AppModel.php(418): PDO->query('SELECT img,titl...')
+#1 /home2/movedl33/public_html/app/model/AppModel.php(280): loop_page('portfolio', '<loop><sql>tabl...', ' ', ' ', 'id', 'DESC', '12')
+#2 /home2/movedl33/public_html/app/webroot/index.php(20): construct_page()
+#3 /home2/movedl33/public_html/index.php(200): include('/home2/movedl33...')
+#4 {main}
+  thrown in /home2/movedl33/public_html/app/model/AppModel.php on line 418
+[19-Sep-2020 03:05:10 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:05:14 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:08:23 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:08:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:08:58 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:09:37 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:09:38 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:10:10 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:10:46 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:10:48 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:11:16 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:11:16 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSET INTO users (title, email, password, keypass, plan_id, created, updated, re' at line 1 in /home2/movedl33/public_html/sandbox.php:40
+Stack trace:
+#0 /home2/movedl33/public_html/sandbox.php(40): PDOStatement->execute()
+#1 {main}
+  thrown in /home2/movedl33/public_html/sandbox.php on line 40
+[19-Sep-2020 03:12:04 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:12:06 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:12:10 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:12:33 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:12:33 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSET INTO users (title, email, password, keypass, plan_id, created, updated, re' at line 1 in /home2/movedl33/public_html/sandbox.php:40
+Stack trace:
+#0 /home2/movedl33/public_html/sandbox.php(40): PDOStatement->execute()
+#1 {main}
+  thrown in /home2/movedl33/public_html/sandbox.php on line 40
+[19-Sep-2020 03:13:56 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:14:01 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:16:09 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:16:11 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:16:13 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:16:40 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:16:40 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSET INTO users (title, email, password, keypass, plan_id, created, updated, re' at line 1 in /home2/movedl33/public_html/sandbox.php:40
+Stack trace:
+#0 /home2/movedl33/public_html/sandbox.php(40): PDOStatement->execute()
+#1 {main}
+  thrown in /home2/movedl33/public_html/sandbox.php on line 40
+[19-Sep-2020 03:17:41 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:18:19 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:19:09 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:20:13 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:20:55 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:20:55 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSET INTO users (title, email, password, keypass, plan_id, created, updated, re' at line 1 in /home2/movedl33/public_html/sandbox.php:44
+Stack trace:
+#0 /home2/movedl33/public_html/sandbox.php(44): PDOStatement->execute()
+#1 {main}
+  thrown in /home2/movedl33/public_html/sandbox.php on line 44
+[19-Sep-2020 03:21:52 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:22:18 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:23:14 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:23:40 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:27:13 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:27:15 America/Fortaleza] PHP Fatal error:  Uncaught Error: Call to undefined function mcrypt_get_iv_size() in /home2/movedl33/public_html/checkout.php:45
+Stack trace:
+#0 /home2/movedl33/public_html/checkout.php(50): decrypt('$1$H2Oc3ec$r5Iu...', '$1$H2Oc3ec$')
+#1 {main}
+  thrown in /home2/movedl33/public_html/checkout.php on line 45
+[19-Sep-2020 03:32:32 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:32:33 America/Fortaleza] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home2/movedl33/public_html/vendors/PHPMailer_5.2.0/PHPMailerAutoload.php on line 45
+[19-Sep-2020 03:33:13 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:33:18 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:33:38 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:33:40 America/Fortaleza] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home2/movedl33/public_html/vendors/PHPMailer_5.2.0/PHPMailerAutoload.php on line 45
+[19-Sep-2020 03:33:40 America/Fortaleza] PHP Warning:  preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead in /home2/movedl33/public_html/vendors/PHPMailer_5.2.0/class.phpmailer.php on line 1862
+[19-Sep-2020 03:34:12 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:34:15 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:34:21 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:34:25 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:34:35 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:34:43 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:34:48 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:36:55 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:37:02 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:38:12 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:38:17 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:38:19 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:38:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:38:43 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:38:46 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:38:49 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:38:53 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:41:51 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:41:56 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:43:20 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:43:28 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:43:33 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:43:36 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:43:38 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:43:39 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:44:13 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:44:16 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:44:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:44:29 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:44:33 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:44:43 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:44:50 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:44:53 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:45:41 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:45:44 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:45:49 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:22 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:25 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:28 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:30 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:33 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:34 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:36 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:43 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:43 America/Fortaleza] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/movedl33/public_html/logout.php on line 5
+[19-Sep-2020 03:47:43 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:47:46 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:48:23 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:48:27 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:48:31 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:48:33 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:48:36 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:51:17 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:51:17 America/Fortaleza] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/movedl33/public_html/logout.php on line 5
+[19-Sep-2020 03:51:17 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:51:21 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:51:41 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:51:44 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:51:49 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:52:14 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:53:04 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:53:08 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:53:13 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:55:48 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:55:49 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:55:54 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:55:59 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:55:59 America/Fortaleza] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/movedl33/public_html/logout.php on line 5
+[19-Sep-2020 03:55:59 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:56:01 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:56:10 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:56:15 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:56:23 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:56:25 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:56:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:56:27 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 03:56:27 America/Fortaleza] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/movedl33/public_html/logout.php on line 5
+[19-Sep-2020 03:56:27 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 04:43:04 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:19:05 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:19:06 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:24:41 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:27:17 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:27:20 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:27:45 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:27:57 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:28:19 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:28:29 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:28:39 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:28:46 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:28:57 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:29:03 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:30:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 06:49:54 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 12:47:43 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 12:47:44 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 12:53:34 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 12:53:41 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 13:17:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 13:26:26 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 14:47:14 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 14:47:14 America/Fortaleza] PHP Fatal error:  Uncaught SodiumException: This is not implemented, as it is not possible to implement Argon2i with acceptable performance in pure-PHP in /home2/movedl33/public_html/app/vendors/sodium_compat/src/Compat.php:1973
+Stack trace:
+#0 /home2/movedl33/public_html/app/vendors/sodium_compat/lib/php72compat.php(767): ParagonIE_Sodium_Compat::crypto_pwhash_str('testpassword', 4, 33554432)
+#1 /home2/movedl33/public_html/test.php(13): sodium_crypto_pwhash_str('testpassword', 4, 33554432)
+#2 {main}
+  thrown in /home2/movedl33/public_html/app/vendors/sodium_compat/src/Compat.php on line 1973
+[19-Sep-2020 14:49:09 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 14:49:09 America/Fortaleza] PHP Fatal error:  Uncaught SodiumException: This is not implemented, as it is not possible to implement Argon2i with acceptable performance in pure-PHP in /home2/movedl33/public_html/app/vendors/sodium_compat/src/Compat.php:1973
+Stack trace:
+#0 /home2/movedl33/public_html/app/vendors/sodium_compat/lib/php72compat.php(767): ParagonIE_Sodium_Compat::crypto_pwhash_str('testpassword', 4, 33554432)
+#1 /home2/movedl33/public_html/test.php(13): sodium_crypto_pwhash_str('testpassword', 4, 33554432)
+#2 {main}
+  thrown in /home2/movedl33/public_html/app/vendors/sodium_compat/src/Compat.php on line 1973
+[19-Sep-2020 14:51:19 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 14:51:19 America/Fortaleza] PHP Fatal error:  Uncaught SodiumException: This is not implemented, as it is not possible to implement Argon2i with acceptable performance in pure-PHP in /home2/movedl33/public_html/app/vendors/sodium_compat/src/Compat.php:1973
+Stack trace:
+#0 /home2/movedl33/public_html/app/vendors/sodium_compat/lib/php72compat.php(767): ParagonIE_Sodium_Compat::crypto_pwhash_str('testpassword', 4, 33554432)
+#1 /home2/movedl33/public_html/test.php(22): sodium_crypto_pwhash_str('testpassword', 4, 33554432)
+#2 {main}
+  thrown in /home2/movedl33/public_html/app/vendors/sodium_compat/src/Compat.php on line 1973
+[19-Sep-2020 14:58:05 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 14:59:03 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 14:59:32 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 15:09:00 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Sep-2020 15:09:04 America/Fortaleza] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0

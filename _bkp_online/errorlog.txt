@@ -1,0 +1,21 @@
+* Hostname was NOT found in DNS cache
+*   Trying 152.199.24.245...
+* Connected to sandbox.pagseguro.uol.com.br (152.199.24.245) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=BR; ST=São Paulo; L=São Paulo; O=Universo Online S.A.; OU=SecOps; CN=*.pagseguro.uol.com.br
+* 	 start date: 2019-11-18 00:00:00 GMT
+* 	 expire date: 2021-10-21 12:00:00 GMT
+* 	 subjectAltName: sandbox.pagseguro.uol.com.br matched
+* 	 issuer: C=US; O=DigiCert Inc; CN=DigiCert SHA2 Secure Server CA
+* 	 SSL certificate verify ok.
+> GET /v2/transactions?email=movedeeplink%40gmail.com&token=DB01CE92BEBF4455A0CE1ABDD9FCF901&paymentMode=default&paymentMethod=creditCard&receiverEmail=movedeeplink%40gmail.com&currency=BRL&extraAmount=1.00&itemId1=0001&itemDescription1=Notebook+Prata&itemAmount1=10.00&itemQuantity1=1&notificationURL=https://movedl.com/retorno.php&reference=REF1234&senderName=Jose+Comprador&senderCPF=22111944785&senderAreaCode=11&senderPhone=56273440&senderEmail=c26281648080944450330%40sandbox.pagseguro.com.br&senderHash=c7bddb72f54afd9e212322d34761fbcf42cdd7c0df66a7c9d1f937bbf2775c5a&shippingAddressRequired=true&shippingAddressStreet=Av.+Brig.+Faria+Lima&shippingAddressNumber=1384&shippingAddressComplement=5+andar&shippingAddressDistrict=Jardim+Paulistano&shippingAddressPostalCode=01452002&shippingAddressCity=Sao+Paulo&shippingAddressState=SP&shippingAddressCountry=BRA&shippingType=1&shippingCost=1.00&creditCardToken=5cbb05dfeba341208be8c3a0a1adf560&installmentQuantity=1&installmentValue=5.00&noInterestInstallmentQuantity=2&creditCardHolderName=Jose+Comprador&creditCardHolderCPF=22111944785&creditCardHolderBirthDate=27/10/1987&creditCardHolderAreaCode=11&creditCardHolderPhone=56273440&billingAddressStreet=Av.+Brig.+Faria+Lima&billingAddressNumber=1384&billingAddressComplement=5+andar&billingAddressDistrict=Jardim+Paulistano&billingAddressPostalCode=01452002&billingAddressCity=Sao+Paulo&billingAddressState=SP&billingAddressCountry=BRA HTTP/1.1
+Host: sandbox.pagseguro.uol.com.br
+Accept: */*
+Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+
+* The requested URL returned error: 404 Not Found
+* Closing connection 0
