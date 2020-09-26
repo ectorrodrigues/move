@@ -30,7 +30,6 @@ function encriptar($action, $string, $key_sk, $key_siv){
   return $output;
 }
 
-
 $action = 'encrypt';
 $string = 'Avantemova2017';
 $encriptado = encriptar($action, $string, $key_sk, $key_siv);
