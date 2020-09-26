@@ -15,9 +15,15 @@
             </div>
 
             <div class="">
-              <form class="text-left" action="../../../sandbox.php" method="post" enctype="multipart/form-data">
+              <form class="text-left" action="../../../new_account.php" method="post" enctype="multipart/form-data">
 
                 <input type="hidden" name="plan" value="<?=$_GET['id']?>">
+
+                <label for="name" class="text-left pl-2 mr-1">Username</label>
+                <span id="warning" class="text-warning">
+                </span><br>
+                <input type="text" name="username" id="username" class="form-control mt-0 mb-3 form-control-lg" placeholder="Somente letras e números, sem acentos.">
+
 
                 <label for="name" class="text-left pl-2">Nome</label><br>
                 <input type="text" name="name" class="form-control mt-0 mb-3 form-control-lg" placeholder="Nome">
@@ -67,5 +73,33 @@ $("#passwordrepeat").focusout(function() {
     $("#passwordrepeat").val('');
   }
 
+});
+</script>
+
+<script>
+
+$( document ).ready(function() {
+    $( "#username" ).focus();
+});
+
+$("#username").focusout(function(e) {
+var username = $(this).val();
+$('#warning').html('');
+$.ajax({
+     type: "GET",
+     url: '<?=ABSOLUTE_PATH?>app/model/validation.php?v=a',
+     data: 'username='+username,
+     success: function(data)
+     {
+       if(data == 'Este username já existe, escolha outro.'){
+         $('#warning').html('*'+data);
+         $('#username').val('');
+         $("#username").focus();
+       } else {
+         $('#username').val(data);
+       }
+
+     }
+   });
 });
 </script>

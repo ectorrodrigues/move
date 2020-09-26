@@ -1,10 +1,16 @@
 <?php
 
+$username = $_GET['user'];
 $link = $_GET['link'];
 
 include 'app/config/database.php';
 $conn = db();
-foreach($conn->query("SELECT * FROM links WHERE code = '$link' ") as $row) {
+
+$query  = $conn->prepare("SELECT id FROM users WHERE username = '$username' ");
+$query->execute();
+$username_id = $query->fetchColumn();
+
+foreach($conn->query("SELECT * FROM links WHERE title = '$link' AND user_id = '$username_id' ") as $row) {
   $userlink     = $row['link'];
   $socialmedia  = $row['socialmedia'];
   $code         = $row['code'];

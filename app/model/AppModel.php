@@ -630,4 +630,9 @@ function encrypting($action, $string, $key_sk, $key_siv){
   return $output;
 }
 
+
+function plans_months($str){
+
+}
+
 ?>

@@ -4,21 +4,32 @@
 
 						include ('../config/database.php');
 						include ('../config/directories.php');
-            $conn = db();
+
+
+						function slug($str){
+							$slug = array( ' '=>'-', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E', 'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U', 'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c', 'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o', 'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b' );
+							$slug = strtolower(strtr( $str, $slug ));
+							return $slug;
+						} //endfunction
 
           	$socialmedia = $_POST['socialmedia'];
           	$link = $_POST['link'];
           	$code = uniqid();
 						$title = $_POST['title'];
+						$title = slug($title);
 						$user_id = $_POST['user'];
 						$created = date('Y-m-d');
 
+						$conn = db();
             $query  = $conn->prepare("INSERT INTO links (title, link, socialmedia, code, user_id, created) VALUES (:title, :link, :socialmedia, :code, :user_id, :created)");
 						$query->bindParam(':title', $title);
 						$query->bindParam(':socialmedia', $socialmedia);
 						$query->bindParam(':code', $code);
             $query->bindParam(':user_id', $user_id);
             $query->bindParam(':created', $created);
+
+
+
 
 
             // INSTAGRAM HANDLING ------------------- *********** ------------------
@@ -77,9 +88,13 @@
 						$query->bindParam(':link', $link);
             $query->execute();
 
+						$query  = $conn->prepare("SELECT username FROM users WHERE id = '$user_id' ");
+						$query->execute();
+						$username = $query->fetchColumn();
+
             echo '
              <label for="link" class="mt-5">Copie o código abaixo</label>
-             <input type="text" id="link" name="link" class="form-control mt-5" value="'.ABSOLUTE_PATH.'dl/'.$code.'">
+             <input type="text" id="link" name="link" class="form-control mt-5" value="'.ABSOLUTE_PATH.'dl/'.$username.'/'.$title.'">
             ';
 
           ?>

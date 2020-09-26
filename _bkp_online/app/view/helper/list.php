@@ -15,6 +15,11 @@
   ';
 
   $test = $_SESSION['login'];
+
+  $query  = $conn->prepare("SELECT username FROM users WHERE id = '$test' ");
+  $query->execute();
+  $username = $query->fetchColumn();
+
   foreach($conn->query("SELECT * FROM links WHERE user_id = '$test' ORDER BY id DESC") as $row) {
 
     $id = $row['id'];
@@ -38,7 +43,7 @@
         </div>
         <div class="row">
           <div class="col-11">
-            <input type="text" name="link'.$id.'" id="link'.$id.'" value="'.ABSOLUTE_PATH.'dl/'.$code.'">
+            <input type="text" name="link'.$id.'" id="link'.$id.'" value="'.ABSOLUTE_PATH.'dl/'.$username.'/'.$title.'">
           </div>
           <div class="col-1 my-auto">
             <i class="far fa-clone my-auto transition" onclick="copylink('.$id.')"></i>

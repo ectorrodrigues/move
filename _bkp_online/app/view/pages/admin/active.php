@@ -28,8 +28,9 @@
 
         <div class="form-group text-center mt-5">
 
-          <label for="link">Dê um título pro seu deep link</label><br>
-          <div class="small mb-lg-0 mb-3" style="margin-top:-10px;">É mais fácil pra se organizar depois =)</div>
+          <label for="link">Dê um título pro seu deep link</label>
+					<span id="warning" class="text-warning">
+					</span><br>
           <input type="text" name="title" class="form-control mt-0 mb-4 form-control-lg" id="title" aria-describedby="link" placeholder="Ex.: Instagram da Maria">
 
           <label for="link">Cole aqui o link</label>
@@ -50,6 +51,36 @@
 
   <div id="result">
   </div>
+
+
+	<script>
+
+	$( document ).ready(function() {
+	    $( "#title" ).focus();
+	});
+
+	$("#title").focusout(function(e) {
+	var linkname = $(this).val();
+	$('#warning').html('');
+	$.ajax({
+	     type: "GET",
+	     url: '<?=ABSOLUTE_PATH?>app/model/validation.php?v=a',
+	     data: 'linkname='+linkname,
+	     success: function(data)
+	     {
+	       if(data == 'Este link já existe, escolha outro.'){
+	         $('#warning').html('*'+data);
+	         $('#title').val('');
+	         $("#title").focus();
+	       } else {
+	         $('#title').val(data);
+	       }
+
+	     }
+	   });
+	});
+	</script>
+
 
 <script>
 $("#form").submit(function(e) {

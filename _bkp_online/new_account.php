@@ -1,14 +1,18 @@
 <?php
 
+  // INCLUDES
+  include 'app/config/database.php';
+  include 'app/config/config.php';
+  include 'app/model/AppModel.php';
+
   // GET THE POSTS
   $plan     = $_POST['plan'];
   $name     = $_POST['name'];
+  $username = $_POST['username'];
   $email    = $_POST['email'];
   $ddd      = $_POST['ddd'];
   $phone    = $_POST['phone'];
   $password = $_POST['password'];
-
-
 
   // FORMAT PHONE
   function phoneformat($str){
@@ -19,42 +23,30 @@
   $ddd   = phoneformat($ddd);
   $phone = phoneformat($phone);
 
-
-
   // CREATE THE REFERENCE ID
   $reference = date("Ymdhms").uniqid();
 
   //GET PLAN DATA FROM DATABASE
-  include 'app/config/database.php';
   $conn = db();
   foreach($conn->query("SELECT * FROM plans WHERE id = '$plan' ") as $row) {
 		$title		= $row['title'];
     $price		= $row['price'];
 	}
 
-  // HASH PASSWORD
-  $plaintext = $password;
-  $cipher = "aes-128-gcm";
-  if (in_array($cipher, openssl_get_cipher_methods())){
-      $ivlen = openssl_cipher_iv_length($cipher);
-      $iv = openssl_random_pseudo_bytes($ivlen);
-      $ciphertext = openssl_encrypt($plaintext, $cipher, $key, $options=0, $iv, $tag);
-      //store $cipher, $iv, and $tag for decryption later
-      $original_plaintext = openssl_decrypt($ciphertext, $cipher, $key, $options=0, $iv, $tag);
-  }
-  $password = $ciphertext;
-
   // GET DATE
   $created = date("Y-m-d");
 
-
+  // HASH PASSWORD
+  //generatekeys();
+  $crypted_password = encrypting("encrypt", $password, $key_sk, $key_siv);
 
   // CREATE USER IN DATABASE
-  $sql = "INSERT INTO users (title, email, password, keypass, plan_id, created, updated, reference, active) VALUES ('$name', '$email', '$password', '$password', '$plan', '$created', '$created', '$reference' ,'0')" ;
+  $conn = db();
+  $sql = "INSERT INTO users (username, title, email, password, keypass, key_iv, key_tag, plan_id, created, updated, reference, active) VALUES('$username', '$name', '$email', '$crypted_password', '$crypted_password', '$key_siv', '$key_sk', '$plan', '$created', '$created', '$reference' ,'0')" ;
   $query = $conn->prepare($sql);
   $query->execute();
 
-
+  // echo "new<br>$crypted_password<br>$key_sk"; die();
 
   //GET THE PAGSEGURO CREDENTIALS
   $query	= $conn->prepare("SELECT content FROM config WHERE title = 'pagseguro_email'");

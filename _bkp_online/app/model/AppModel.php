@@ -528,32 +528,24 @@ function price_format($str){
 
 function activebanner($str){
     global $i_activebanner;
-
     if($i_activebanner == 1){
         $str = ' active';
     } else {
     	$str = '';
-
     }
-
     $i_activebanner++;
     return $str;
-
 } //endfunction
 
 function activebanner2($str){
     global $i_activebanner2;
-
     if($i_activebanner2 == 1){
         $str = ' active';
     } else {
     	$str = '';
-
     }
-
     $i_activebanner2++;
     return $str;
-
 } //endfunction
 
 function uppercase($str){
@@ -578,90 +570,22 @@ function animationdelay($str){
 
 } //endfunction
 
-function formatphonefooter($str){
-  $str = str_replace('<br>', '<span class="pl-4 separator-footer">|</span>', $str);
-	return $str;
-} //endfunction
-
-function portfolioitems($str){
-
-  $conn   = db();
-  $result = $conn->query("SELECT * FROM portfolio WHERE id = '$str' ");
-  $str    = '';
-
-  while ($obj_nest = $result->fetch(PDO::FETCH_OBJ)) {
-
-    $title  = $obj_nest->title;
-    $id     = $obj_nest->id;
-    $img    = $obj_nest->img;
-    $client = $obj_nest->client;
-
-    $str .= '<div class="col-12 p-lg-0 p-lg-3 p-5 text-center '.checkproportion($img).'">';
-
-    $str .= '
-          <h1>'.$title.'</h1>
-          <h2>'.clientname($client).'</h2>
-          <picture>
-            <source srcset="'.IMG_DIR.'portfolio/'.webpconvert($img).'" type="image/webp">
-            <source srcset="'.IMG_DIR.'portfolio/'.webporiginal($img).'" type="image/jpeg">
-            <img src="'.IMG_DIR.'portfolio/'.webporiginal($img).'" alt="'.$title.'">
-          </picture>';
-
-    $result2 = $conn->query("SELECT * FROM portfolio_gallery WHERE id_portfolio = '$id' ");
-    while ($obj_nest2 = $result2->fetch(PDO::FETCH_OBJ)) {
-      $title2 = $obj_nest2->title;
-      $img2   = $obj_nest2->img;
-      $str   .= '
-          <picture>
-            <source srcset="'.IMG_DIR.'portfolio/'.webpconvert($img2).'" type="image/webp">
-            <source srcset="'.IMG_DIR.'portfolio/'.webporiginal($img2).'" type="image/jpeg">
-            <img src="'.IMG_DIR.'portfolio/'.webporiginal($img2).'" alt="'.$title.'">
-          </picture>';
-    }
-
-    $str .= '
-        </div>';
-  }
-
-  return $str;
-
-}
-
 function keyword($str){
-
   $conn   = db();
   $pageget = $_GET['page'];
   $result = $conn->query("SELECT * FROM $pageget WHERE id = '$str' ");
   $str    = '';
-
   while ($obj_nest = $result->fetch(PDO::FETCH_OBJ)) {
     $title  = $obj_nest->title;
     $description  = $obj_nest->description;
     $client = $obj_nest->client;
     $str = ", $title,  ".clientname($client);
   }
-
   return $str;
-
-}
-
-
-function categoryname($str){
-
-  $conn = db();
-
-  $query = $conn->prepare("SELECT category.title FROM produtos INNER JOIN category ON $str=category.id");
-  $query->execute();
-  $str = $query->fetchColumn();
-  $str = strtoupper($str);
-
-  return strtoupper($str);
 }
 
 function clientname($str){
-
   $conn = db();
-
   $query = $conn->prepare("SELECT client.title FROM portfolio INNER JOIN client ON $str=client.id");
   $query->execute();
   $str = $query->fetchColumn();
@@ -670,20 +594,14 @@ function clientname($str){
   return strtoupper($str);
 }
 
-
-
-
 function webpconvert($str){
   $extension = explode(".",$str);
   $extension = $extension[1];
-
   if($extension != 'webp'){
     $str = substr($str, 0, -4) . '.webp';
   }
-
   return $str;
 }
-
 
 function webporiginal($str){
   $extension = explode(".",$str);
@@ -692,42 +610,24 @@ function webporiginal($str){
   return $str;
 }
 
+$key_sk = random_bytes(32);
+$key_siv = random_bytes(32);
+$key_sk = base64_encode($key_sk);
+$key_siv = base64_encode($key_siv);
 
-function email($type, $content, $email){
-
- $subject = 'Contato Site';
-
-  // SENDING EMAIL
- require ($_SERVER['DOCUMENT_ROOT'].'vendors/PHPMailer_5.2.0/class.phpmailer.php');
- require ($_SERVER['DOCUMENT_ROOT'].'vendors/PHPMailer_5.2.0/class.pop3.php');
- require ($_SERVER['DOCUMENT_ROOT'].'vendors/PHPMailer_5.2.0/class.smtp.php');
-
- //ini_set('max_execution_time', 0);
- $mail = new PHPMailer;
-
- //$mail->SMTPDebug = 3;                               // Enable verbose debug output
- $mail->isSMTP();                                      // Set mailer to use SMTP
- $mail->Host = 'a2plcpnl0722.prod.iad2.secureserver.net';  // Specify main and backup SMTP servers
- $mail->SMTPAuth = true;                               // Enable SMTP authentication
- $mail->Username = 'contato@arbonresidence.com.br';                 // SMTP username
- $mail->Password = 'contato@arbonresidence.com.br';                           // SMTP password
- $mail->SMTPSecure = '#Sky2019tower';                            // Enable TLS encryption, `ssl` also accepted
- $mail->Port = 465;                                 // TCP port to connect to
- $mail->CharSet = 'UTF-8';
-
- $mail->addAddress('contato@arbonresidence.com.br', 'Sky Tower Site');
- $mail->addReplyTo('contato@arbonresidence.com.br');
- $mail->isHTML(true);                                  // Set email format to HTML
-
- $mail->Subject = $subject;
- $mail->Body    = $content;
-
- if(!$mail->send()) {
-     echo '<div class="text-danger">Oops something went wrong please try again !</div>';
- } else {
-     header('Location:http://arbonresidence.com.br/plantas');
- }
-
-} //endfunction
+function encrypting($action, $string, $key_sk, $key_siv){
+  $cypher_method = "AES-256-CBC";
+  $output = false;
+  $key    = hash("sha256", SECRET_KEY);
+  $iv     = substr(hash("sha256", SECRET_IV), 0, 16);
+  if ($action == "encrypt"){
+    $output = openssl_encrypt($string, $cypher_method, $key, 0, $iv);
+    $output = base64_encode($output);
+  } else if($action == "decrypt"){
+    $output = base64_decode($string);
+    $output = openssl_decrypt($output, $cypher_method, $key, 0, $iv);
+  }
+  return $output;
+}
 
 ?>

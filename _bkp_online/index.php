@@ -154,24 +154,38 @@ include('app/model/AppModel.php');
 			/*--------- LOGIN POST REQUEST ----------*/
 			if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				if(!empty($_POST['user']) && !empty($_POST['password'])){
+
 					$user		= $_POST['user'];
 					$pass		= $_POST['password'];
 
-
-					$plaintext = $pass;
-				  $cipher = "aes-128-gcm";
-				  if (in_array($cipher, openssl_get_cipher_methods())){
-				      $ivlen = openssl_cipher_iv_length($cipher);
-				      $iv = openssl_random_pseudo_bytes($ivlen);
-				      $ciphertext = openssl_encrypt($plaintext, $cipher, $key, $options=0, $iv, $tag);
-				      //store $cipher, $iv, and $tag for decryption later
-				      $original_plaintext = openssl_decrypt($ciphertext, $cipher, $key, $options=0, $iv, $tag);
-				  }
-				  $pass = $ciphertext;
-
-
+					// CHECK IF THE USER EXISTS AND IF SO, GET HIS HASHED PASSWORD
 					$conn		= db();
-					$query	= $conn->prepare("SELECT keypass FROM users WHERE email= :user AND password= :pass");
+					$query	= $conn->prepare("SELECT password FROM users WHERE email= :user");
+					$query->bindParam(':user', $user);
+					$query->execute();
+					if ($query->rowCount() > 0){
+						$passfetch = $query->fetchColumn();
+					} else {
+						echo '<p style="text-align:center; margin:20px 0 -50px 0;">Usuário não cadastrado no sistema.<p>';
+						include (WEBROOT_DIR . 'login.php');
+						die();
+					}
+
+					// ENCRYPT PASSWORD AND CHECK IF IT MATCHES THE HASHED PASSWORD STORED ON DATABASE
+					foreach($conn->query("SELECT * FROM users WHERE email = '$user' ") as $row) {
+						$tag		    = $row['key_tag'];
+					  $iv         = $row['key_iv'];
+					}
+					$crypted_password = encrypting("encrypt", $pass, $tag, $iv);
+					if($passfetch == $crypted_password){
+						$pass = $passfetch;
+					} else {
+						$pass = 'wrongpass';
+					}
+
+					// CHECK IF THERE'S AN USER ATTACHED WITH THE HASHED PASSWORD
+					$conn		= db();
+					$query	= $conn->prepare("SELECT password FROM users WHERE email= :user AND password= :pass");
 					$query->bindParam(':user', $user);
 					$query->bindParam(':pass', $pass);
 					$query->execute();

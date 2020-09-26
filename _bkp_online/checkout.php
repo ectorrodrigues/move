@@ -3,8 +3,10 @@
 // GET THE NOTIFICATION CODE
 $code = $_POST['notificationCode'];
 
-// CONNECT DATABASE
+// INCLUDES
 include 'app/config/database.php';
+include 'app/config/config.php';
+include 'app/model/AppModel.php';
 $conn = db();
 
 // GET THE PAGSEGURO CREDENTIALS
@@ -30,9 +32,11 @@ $reference = simplexml_load_string($resultado2)->reference;
 foreach($conn->query("SELECT * FROM users WHERE reference = '$reference' ") as $row) {
   $emailuser  = $row['email'];
   $password		= $row['password'];
+  $iv         = $row['key_iv'];
+  $tag		    = $row['key_tag'];
 }
 
-$emailuser = 'web.mova@gmail.com'; //EMAIL TESTING - REMOVE THIS LINE FOR PRODUCTION
+// $emailuser = 'web.mova@gmail.com'; //EMAIL TESTING - REMOVE THIS LINE FOR PRODUCTION
 
 // PAYMENT STATUS CONDITIONAL
 if($status == '3'){
@@ -40,18 +44,8 @@ if($status == '3'){
   $query 	= $conn->prepare("UPDATE users SET active = '1' WHERE reference = '$reference' ");
   $query->execute();
 
-  /*
-  $enckey = '$1$H2Oc3ec$';
-  function decrypt($encrypted_string, $encryption_key) {
-      $iv_size = mcrypt_get_iv_size(MCRYPT_BLOWFISH, MCRYPT_MODE_ECB);
-      $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-      $decrypted_string = mcrypt_decrypt(MCRYPT_BLOWFISH, $encryption_key, $encrypted_string, MCRYPT_MODE_ECB, $iv);
-      return $decrypted_string;
-  }
-  $passworddec = decrypt($password, $enckey);
-  */
-
-  $passworddec = 'test';
+  // DECRYPTING PASSWORD
+  $decrypted_password = encrypting("decrypt", $password, $tag, $iv);
 
   $email = $emailuser;
   $subject = 'Move - Ativação de Conta';
@@ -62,6 +56,7 @@ if($status == '3'){
       <title>Email Move</title>
     </head>
     <body style="width:100%; text-align:center; background-color:#ddd; font-family:Arial, sans serif; color:#333;" align="center">
+      <div style="width:100%; text-align:center; margin:30px 0; color:#ddd;">.</div>
       <div style="width:auto; text-align:center; margin:30px; border-radius:12px; background-color:#fff; padding:80px; margin:40px 100px;" align="center">
 
         <div class="text-align:text-center;">
@@ -79,7 +74,7 @@ if($status == '3'){
           </p>
           <p>
             <span style="">Sua senha é:</span><br>
-            <h2 style="margin-top:-10px; color:#000;">'.$passworddec.'</h2>
+            <h2 style="margin-top:-10px; color:#000;">'.$decrypted_password.'</h2>
           </p>
           <p>
             <br>
@@ -96,12 +91,11 @@ if($status == '3'){
         </div>
 
       </div>
+      <div style="width:100%; text-align:center; margin:30px 0; color:#ddd;">.</div>
     </body>
   </html>
 
   ';
-
-  include 'app/model/email.php';
 
 } else {
 
@@ -115,6 +109,7 @@ if($status == '3'){
       <title>Email Move</title>
     </head>
     <body style="width:100%; text-align:center; background-color:#ddd; font-family:Arial, sans serif; color:#333;" align="center">
+      <div style="width:100%; text-align:center; margin:30px 0; color:#ddd;">.</div>
       <div style="width:auto; text-align:center; margin:30px; border-radius:12px; background-color:#fff; padding:80px; margin:40px 100px;" align="center">
 
         <div class="text-align:text-center;">
@@ -145,14 +140,15 @@ if($status == '3'){
         </div>
 
       </div>
+      <div style="width:100%; text-align:center; margin:30px 0; color:#ddd;">.</div>
     </body>
   </html>
 
   ';
 
-  include 'app/model/email.php';
-
 }
+
+include 'app/model/email.php';
 
 $conn = null;
 
