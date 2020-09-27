@@ -3,22 +3,20 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="author" content="Mova" />
+    <meta name="author" content="Move" />
     <meta http-equiv="cache-control" content="Public, max-age=31536000">
     <meta http-equiv="Pragma" content="Public">
     <meta http-equiv="Expires" content="Expires: Sat, 13 May 2020 07:00:00 GMT">
     <meta http-equiv="content-language" content="pt-br" />
-    <meta name="description" content="Mova Advertising Portfolio and services." />
-    <meta name="DC.description" content="Mova Advertising Portfolio and services." />
-    <meta name="keywords" content="mova, propaganda, publicidade, marketing, agencia, toledo, design, sites, comunicação, campanhas     " />
-    <meta name="DC.subject" content="mova, propaganda, publicidade, marketing, agencia, toledo, design, sites, comunicação, campanhas     " />
+    <meta name="description" content="Move Deep Link" />
+    <meta name="DC.description" content="Move Deep Linking service" />
+    <meta name="keywords" content="move, propaganda, publicidade, marketing, agencia, design, sites, comunicação, campanhas, deep, linking, link, links     " />
+    <meta name="DC.subject" content="move, propaganda, publicidade, marketing, agencia, design, sites, comunicação, campanhas, deep, linking, link, links     " />
     <meta name="robots" content="all" />
     <meta name="rating" content="general" />
-    <meta name="DC.title" content="Mova Propaganda" />
+    <meta name="DC.title" content="Move Deep Link" />
     <meta name="theme-color" content="#dddddd"/>
-		<!--
-    <meta name="viewport" content="width=640, initial-scale=1.0, maximum-scale=5" />
-	-->
+		<!-- <meta name="viewport" content="width=640, initial-scale=1.0, maximum-scale=5" /> -->
 
     <!-- Jquery and Ajax Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -34,12 +32,11 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <!-- JQuery Transition Effects - Animate On Scroll Library
+    <!-- AOS Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    -->
 
-    <!-- <link rel="canonical" href="http://mova.ppg.br/"/> -->
+    <link rel="canonical" href="http://movedl.com/">
 
     <title>MOVE</title>
 
