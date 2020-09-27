@@ -12,7 +12,7 @@
 	}
 
 	$https = $_SERVER['HTTPS'];
-	if($https == ''){ $https = 'http://'; }else{	$https = 'http://'; }
+	if($https == ''){ $https = 'http://'; }else{	$https = 'https://'; }
 	$baseurl = $https.$_SERVER['HTTP_HOST'];
 
 	$localhost_check = $_SERVER['HTTP_HOST'];
