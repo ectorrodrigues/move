@@ -2,11 +2,21 @@
 	function db () {
 		static $conn;
 
-		$servername	= 'localhost';
-		$dbname		= 'move';
-		$username	= 'root';
-		$password	= 'root';
-		$port = 8889;
+
+		$localhost_check = $_SERVER['HTTP_HOST'];
+		if (strpos($localhost_check, 'localhost') !== false) {
+			$servername	= 'localhost';
+			$dbname		= 'move';
+			$username	= 'root';
+			$password	= 'root';
+			$port = 8889;
+		} else {
+			$servername	= 'localhost';
+			$dbname		= 'movedl33_db';
+			$username	= 'movedl33_db';
+			$password	= '#Avantemova2016';
+			$port = 8888;
+		}
 
 		try{
 			$conn = new PDO("mysql:host=$servername; dbname=$dbname; port=$port", $username, $password);
