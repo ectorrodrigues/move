@@ -1,18 +1,18 @@
 
 <div class="container-fluid">
   <div class="row justify-content-center py-lg-3">
-    <div class="col-10">
+    <div class="col-lg-10 col-12">
 
       <h1 class="text-center mt-2 mb-5">Planos</h1>
 
       <div class="row justify-content-center py-lg-3 mb-5">
 
         <loop><sql>table=plans;where=id = '1';</sql>
-          <div class="col-lg-3 col-10 text-center transition box-home py-4 mx-2">
+          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-2 my-lg-0 my-5">
               <div>
                 <h2>{title}</h2>
               </div>
-              <div class="text-left mt-4">
+              <div class="text-left mt-4 pl-lg-0 pl-4 description-list">
                 {description}
                   <li class="cliques_{id}">5.000 cliques</li>
                 </ul>
@@ -38,11 +38,11 @@
 
 
         <loop><sql>table=plans;where=id = '2';</sql>
-          <div class="col-lg-3 col-10 text-center transition box-home py-4 mx-2">
+          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-2 my-lg-0 my-5">
               <div>
                 <h2>{title}</h2>
               </div>
-              <div class="text-left mt-4">
+              <div class="text-left mt-4 pl-lg-0 pl-4 description-list">
                 {description}
                   <li class="cliques_{id}">1.000 cliques</li>
                 </ul>
@@ -67,11 +67,11 @@
         </loop>
 
         <loop><sql>table=plans;where=id = '6';</sql>
-          <div class="col-lg-3 col-10 text-center transition box-home py-4 mx-2">
+          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-2 my-lg-0 my-5">
               <div>
                 <h2>{title}</h2>
               </div>
-              <div class="text-left mt-4">
+              <div class="text-left mt-4 pl-lg-0 pl-4 description-list">
                 {description}
                   <li class="cliques_{id}">3.000 cliques</li>
                 </ul>

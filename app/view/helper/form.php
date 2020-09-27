@@ -23,126 +23,144 @@
   $query->execute();
   $table_fields = $query->fetchAll(PDO::FETCH_COLUMN);
 
+  $ignore = array('key_iv', 'key_tag', 'reference');
+
 
   foreach($table_fields as $field) {
 
     // TRADUÇÕES -------------------- *******************
-
-
     if($field == 'title'){ $label = 'Nome'; }
+    if($field == 'username'){ $label = 'username'; }
     if($field == 'email'){ $label = 'E-mail'; }
     if($field == 'password'){ $label = 'Senha'; }
     if($field == 'keypass'){ $label = 'Confirme a senha'; }
     if($field == 'plan_id'){ $label = 'Plano'; }
-
-
     // TRADUÇÕES FIM ---------------- *******************
 
     $inputs = '';
 
-    if($action == 'edit'){
-      foreach($conn->query("SELECT * FROM ".$title." WHERE id = '".$item."' ") as $row_item) {
-        $value    = $row_item[$field];
-        //if($field == 'data'){  $value = '2018-01-01';}
-      }
-    } else {
-      $value  = '';
-      if($field == 'data'){  $value = date("Y-m-d");}
-    }
+    if(!in_array($field, $ignore)){
 
-    if(in_array($field, $array_fields_hidden, TRUE)){
-      $inputs  .= '<input type="hidden" name="'.$field.'" value="'.$value.'" />';
-    }
-
-    elseif(in_array($field, $array_fields_text, TRUE)){
-
-      if($field == 'plan_id'){
-        foreach($conn->query("SELECT title FROM plans WHERE id = '".$value."' ") as $row) {
-          $field    = $row['title'];
+      if($action == 'edit'){
+        foreach($conn->query("SELECT * FROM ".$title." WHERE id = '".$item."' ") as $row_item) {
+          $value    = $row_item[$field];
+          //if($field == 'data'){  $value = '2018-01-01';}
         }
-        $inputs  .= '<h1 class="text-dark mt-5 mb-0 pb-0">
-                      Plano '.$field.'
-                    </h1>
-                    <div class="text-center mb-4">
-                      <strong>
-                      <a href="'.ROOT.'">
-                        Fazer Upgrade
-                      </a>
-                      </strong>
-                    </div>';
       } else {
-        $inputs  .= '<label>'.$label.':</label><input type="text" name="'.$field.'" id="'.$field.'" placeholder="'.$field.'" value="'.$value.'" />';
-      }
-    }
-
-    elseif(in_array($field, $array_fields_select, TRUE)){
-
-      $inputs  .= '<label>'.$label.':</label><select name="'.$field.'">';
-
-      if($field == "category" || $field == "subcategory"  ){ $field = $field;}
-      elseif($field == "id_category"){ $field = "category";}
-
-      foreach($conn->query("SELECT * FROM ".$field." ORDER BY title ASC") as $row) {
-        $id_select     = $row['id'];
-        $title_select  = $row['title'];
-
-        if($id == $id_select){ $selected = 'selected="selected"'; } else { $selected = ''; }
-
-        $inputs  .= '<option value="'.$id_select.'" '.$selected.'>'.$title_select.'</option>';
+        $value  = '';
+        if($field == 'data'){  $value = date("Y-m-d");}
       }
 
-      $inputs  .= '</select>';
+      if(in_array($field, $array_fields_hidden, TRUE)){
+        $inputs  .= '<input type="hidden" name="'.$field.'" value="'.$value.'" />';
+      }
 
-    }
+      elseif(in_array($field, $array_fields_text, TRUE)){
 
-    elseif(in_array($field, $array_fields_number, TRUE)){
-      $inputs  .= '<label>'.$label.':</label><input type="number" name="'.$field.'" id="'.$field.'" placeholder="'.$field.'" value="'.$value.'" />';
-    }
 
-    elseif(in_array($field, $array_fields_price, TRUE)){
-      $inputs  .= '<label>'.$label.':</label><input type="number" name="'.$field.'" id="'.$field.'" placeholder="'.$field.'"  step="any" value="'.$value.'" />';
-    }
 
-    elseif(in_array($field, $array_fields_img, TRUE)){
-      $inputs  .= '<label>'.$label.':</label><input type="file" name="'.$field.'" />';
-    }
+        if($field == 'plan_id'){
+          foreach($conn->query("SELECT title FROM plans WHERE id = '".$value."' ") as $row) {
+            $field    = $row['title'];
+          }
 
-    elseif(in_array($field, $array_fields_time, TRUE)){
-      $inputs  .= '<label>'.$label.':</label><input type="time" name="'.$field.'" />';
-    }
+          $inputs  .= '<h1 class="text-dark mt-5 mb-0 pb-0">
+                        Plano '.$field.'
+                      </h1>
+                      <div class="text-center mb-4">
+                        <strong>
+                        <a href="'.ROOT.'">
+                          Fazer Upgrade
+                        </a>
+                        </strong>
+                      </div>';
+        } else {
 
-    elseif(in_array($field, $array_fields_textarea, TRUE)){
-      $inputs  .= '<label>'.$label.':</label><textarea name="'.$field.'">'.$value.'</textarea><script> CKEDITOR.replace( "description" );</script><script> CKEDITOR.replace( "content" );</script><script> CKEDITOR.replace( "texto" );</script><script> CKEDITOR.replace( "certificacoes" );</script><script> CKEDITOR.replace( "institucional" );</script><script> CKEDITOR.replace( "lucratividade" );</script>';
-      $textreavalue = $value;
-    }
+          if($field != 'username'){
+            $readonly = '';
+          } else {
+            $readonly = ' readonly="readonly"';
+          }
 
-    elseif($field == "resumo"){
-      //$inputs  .= '<input type="hidden" name="'.$field.'" value="'.$value.'" />';
-      $inputs  .= '<label>'.$label.':</label><div>'.$value.'</div>';
-    }
+          $inputs  .= '<label>'.$label.':</label><input type="text" name="'.$field.'" id="'.$field.'" placeholder="'.$field.'" value="'.$value.'" '.$readonly.' />';
+        }
+      }
 
-    elseif(in_array($field, $array_fields_date, TRUE)){
+      elseif(in_array($field, $array_fields_select, TRUE)){
 
-      $inputs  .= '<label>'.$label.':</label><input type="date" name="'.$field.'" value="'.date("Y-m-d", strtotime($value)).'" />';
+        $inputs  .= '<label>'.$label.':</label><select name="'.$field.'">';
 
-    }
+        if($field == "category" || $field == "subcategory"  ){ $field = $field;}
+        elseif($field == "id_category"){ $field = "category";}
 
-    elseif(in_array($field, $array_fields_password, TRUE)){
-      $inputs  .= '<label>'.$label.':</label><input type="password" name="'.$field.'" id="'.$field.'" placeholder="'.$field.'" value="'.$value.'" />';
-    }
+        foreach($conn->query("SELECT * FROM ".$field." ORDER BY title ASC") as $row) {
+          $id_select     = $row['id'];
+          $title_select  = $row['title'];
 
-    elseif($field == "status_pagseguro"){
-      $inputs  .= '<label>'.$label.':</label>
-      <select name = "status_pagseguro">
-        <option value="1">Aguardando Pagto</option>
-        <option value="2">Aprovado</option>
-        <option value="3">Cancelado</option>
-        <option value="4">Concluído</option>
-      </select>';
-    }
+          if($id == $id_select){ $selected = 'selected="selected"'; } else { $selected = ''; }
 
-    else {
-      $inputs  .= '<label>'.$label.':</label><input type="text" name="'.$field.'"  id="'.$field.'" placeholder="'.$field.'" value="'.$value.'" />';
+          $inputs  .= '<option value="'.$id_select.'" '.$selected.'>'.$title_select.'</option>';
+        }
+
+        $inputs  .= '</select>';
+
+      }
+
+      elseif(in_array($field, $array_fields_number, TRUE)){
+        $inputs  .= '<label>'.$label.':</label><input type="number" name="'.$field.'" id="'.$field.'" placeholder="'.$field.'" value="'.$value.'" />';
+      }
+
+      elseif(in_array($field, $array_fields_price, TRUE)){
+        $inputs  .= '<label>'.$label.':</label><input type="number" name="'.$field.'" id="'.$field.'" placeholder="'.$field.'"  step="any" value="'.$value.'" />';
+      }
+
+      elseif(in_array($field, $array_fields_img, TRUE)){
+        $inputs  .= '<label>'.$label.':</label><input type="file" name="'.$field.'" />';
+      }
+
+      elseif(in_array($field, $array_fields_time, TRUE)){
+        $inputs  .= '<label>'.$label.':</label><input type="time" name="'.$field.'" />';
+      }
+
+      elseif(in_array($field, $array_fields_textarea, TRUE)){
+        $inputs  .= '<label>'.$label.':</label><textarea name="'.$field.'">'.$value.'</textarea><script> CKEDITOR.replace( "description" );</script><script> CKEDITOR.replace( "content" );</script><script> CKEDITOR.replace( "texto" );</script><script> CKEDITOR.replace( "certificacoes" );</script><script> CKEDITOR.replace( "institucional" );</script><script> CKEDITOR.replace( "lucratividade" );</script>';
+        $textreavalue = $value;
+      }
+
+      elseif($field == "resumo"){
+        //$inputs  .= '<input type="hidden" name="'.$field.'" value="'.$value.'" />';
+        $inputs  .= '<label>'.$label.':</label><div>'.$value.'</div>';
+      }
+
+      elseif(in_array($field, $array_fields_date, TRUE)){
+
+        $inputs  .= '<label>'.$label.':</label><input type="date" name="'.$field.'" value="'.date("Y-m-d", strtotime($value)).'" />';
+
+      }
+
+      elseif(in_array($field, $array_fields_password, TRUE)){
+        if($field == 'keypass'){
+          $placeholder_keypass = 'password';
+        } else {
+          $placeholder_keypass = $field;
+        }
+        $inputs  .= '<label>'.$label.':</label><input type="password" name="'.$field.'" id="'.$field.'" placeholder="'.$placeholder_keypass.'" value="'.$value.'" />';
+      }
+
+      elseif($field == "status_pagseguro"){
+        $inputs  .= '<label>'.$label.':</label>
+        <select name = "status_pagseguro">
+          <option value="1">Aguardando Pagto</option>
+          <option value="2">Aprovado</option>
+          <option value="3">Cancelado</option>
+          <option value="4">Concluído</option>
+        </select>';
+      }
+
+      else {
+        $inputs  .= '<label>'.$label.':</label><input type="text" name="'.$field.'"  id="'.$field.'" placeholder="'.$field.'" value="'.$value.'" />';
+      }
+
     }
 
     echo $inputs;
@@ -232,5 +250,18 @@
 $( document ).ready(function() {
     $('body').css('background', '#fff');
     $('.menu_admin div a i').css('color', '#333');
+});
+</script>
+
+<script type="text/javascript">
+$("#keypass").focusout(function() {
+  var pass        = $("#password").val();
+  var passrepeat  = $("#keypass").val();
+
+  if(pass != passrepeat){
+    alert("As senhas não coincidem. Digite novamente.");
+    $("#keypass").val('');
+  }
+
 });
 </script>

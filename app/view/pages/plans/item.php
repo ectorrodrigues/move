@@ -10,7 +10,7 @@
               <h1>{title}</h1>
             </div>
 
-            <div class="text-center pt-3 pb-4 plan-list">
+            <div class="text-center pt-lg-3 pb-lg-4 py-5 plan-list">
               {description}
               <li>Limite de {function->numberformat->links_limit} cliques no período</li>
               <li>Links no ar duante {function->check_months->months}</li>
