@@ -1,6 +1,5 @@
 <?php
 
-echo $_SERVER['HTTP_HOST']; die();
 /**
 * Database file include
 */
