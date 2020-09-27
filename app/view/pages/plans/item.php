@@ -10,8 +10,12 @@
               <h1>{title}</h1>
             </div>
 
-            <div class="text-center py-4 plan-list">
+            <div class="text-center pt-3 pb-4 plan-list">
               {description}
+              <li>Limite de {function->numberformat->links_limit} cliques no período</li>
+              <li>Links no ar duante {function->check_months->months}</li>
+              <li>Valor Total: R$ {function->price_format->price}</li>
+              </ul>
             </div>
 
             <div class="">

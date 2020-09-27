@@ -54,6 +54,43 @@ if(isset($_GET['linkname'])){
     echo $linknameslug;
   }
 
+}
+
+
+// GET THE PRICE FROM THE PLAN ID
+if(isset($_GET['id_price'])){
+
+  $id_price = $_GET['id_price'];
+
+  $conn = db();
+
+
+	foreach($conn->query("SELECT price, months FROM plans WHERE id = '$id_price'") as $row) {
+		$price		    = $row['price'];
+		$months       = $row['months'];
+	}
+
+	$totalprice = ($price/$months).'0';
+	$totalprice = 'R$ '.str_replace(".",",", $totalprice);
+	$price = 'R$ '.str_replace(".",",", $price);
+
+	echo $totalprice.'<span class="month">/mês</span><br><span class="totalprice">Total: R$ '.str_replace(".",",", $price).'</span>';
+
+}
+
+
+// GET THE CLIQUES THE PLAN ID
+if(isset($_GET['cliques'])){
+
+  $id_cliques = $_GET['cliques'];
+
+  $conn = db();
+  $query = $conn->prepare("SELECT links_limit FROM plans WHERE id = '$id_cliques'");
+  $query->execute();
+  $fetch = $query->fetchColumn();
+
+	$fetch = number_format($fetch,0,",",".").' cliques';
+	echo $fetch;
 
 }
 

@@ -526,6 +526,11 @@ function price_format($str){
   return $str;
 } //endfunction
 
+function numberformat($str){
+  $str = number_format($str,0,",",".");
+  return $str;
+} //endfunction
+
 function activebanner($str){
     global $i_activebanner;
     if($i_activebanner == 1){
@@ -632,7 +637,33 @@ function encrypting($action, $string, $key_sk, $key_siv){
 
 
 function plans_months($str){
+  $limit = $str+4;
+  $return = '';
+  $monthsarray = array('1' => '1', '2' => '3', '3' => '6', '4' => '12');
+  $monthsarray_key = 1;
+  $plural_mes = '';
 
+  for($i=$str;$i<$limit;$i++){
+
+    if($monthsarray_key == 1){
+      $plural_mes = ' mês';
+    } else {
+      $plural_mes = ' meses';
+    }
+
+    $return .= '<option value="'.$i.'">'.$monthsarray[$monthsarray_key].$plural_mes.'</option>';
+    $monthsarray_key++;
+  }
+  return $return;
+}
+
+function check_months($str){
+  if($str > 1){
+    $str = $str.' meses';
+  } else {
+    $str = $str.' mês';
+  }
+  return $str;
 }
 
 ?>
