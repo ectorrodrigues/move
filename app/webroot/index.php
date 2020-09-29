@@ -2,17 +2,22 @@
 	require (ELEMENTS_DIR .'head.php');
 ?>
 
-<body>
+<body class="movement_bg">
 
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTGRPX7"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-	<?php include (ELEMENTS_DIR.'top.php'); ?>
+	<?php
+		// CONSTRUCTIONG TOP
+		if(empty($page)){ $pagetop = 'home'; } else { $pagetop 	= $_GET['page']; }
+		construct_page($pagetop, 'top.php');
+	?>
 
 	<main>
 		<?php
+			// CONSTRUCTIONG BODY
 			$url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 			if(empty($page)){
 				$page = 'home';
@@ -29,8 +34,13 @@
 					construct_page($page, $archive);
 				}
 			}
-			include (ELEMENTS_DIR .'footer.php');
 		?>
 	</main>
+
+	<?php
+		// CONSTRUCTIONG FOOTER
+		if(empty($page)){ $pagetop = 'home'; } else { $pagetop 	= $_GET['page']; }
+		construct_page($pagetop, 'footer.php');
+	?>
 
 </body>

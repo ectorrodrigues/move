@@ -1,9 +1,15 @@
 body{
   font-size: 18px;
   height: 100%;
+  /*
   background: rgb(44,39,76);
   background: linear-gradient(45deg, rgba(44,39,76,1) 0%, rgba(255,0,97,0.9962359943977591) 100%);
-  color: #fff;
+  */
+  background-image: url('../../webroot/img/bg.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  color: #222;
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -47,12 +53,23 @@ select{
   border-width: 3px;
 }
 
+.form-item form .btn{
+  color: #222;
+  border-color: #222;
+}
+
 .transition{
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	-ms-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
+}
+
+.parallax{
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
 }
 
 h1{
@@ -151,22 +168,6 @@ button{
 .socialmedias input:checked + label {
 }
 
-
-.imageRot {
-   -webkit-animation:spin 1s ease-in-out;
-    -moz-animation:spin 1s ease-in-out;
-    animation:spin 1s ease-in-out;
-}
-@-moz-keyframes spin {
-    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
-}
-@-webkit-keyframes spin {
-    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
-}
-@keyframes spin {
-    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
-}
-
 hr{
   border-color: #fff;
   border-width: 1px;
@@ -262,6 +263,7 @@ hr{
   border-radius: 12px;
   text-align: center;
   color: #666;
+  box-shadow: 0px 0px 10px 2px #eee;
 }
 
 .box-home .btn{
@@ -301,6 +303,110 @@ hr{
 .totalprice{
   font-size: 14px;
 }
+
+.banner{
+  /*
+  background: rgb(44,39,76);
+  background: linear-gradient(0deg, rgba(44,39,76,1) 0%, rgba(0,0,0) 100%);
+  */
+}
+
+.banner-heading{
+  font-size: 2.5em;
+  padding: 0 30px 0 100px;
+  color: #D4145A;
+}
+
+.color-watermelon{
+  color: #D4145A;
+}
+
+.bg-color-watermelon{
+  background-color: #D4145A;
+  border-radius: 15px;
+}
+
+footer, footer a{
+  color: #222 !important;
+}
+
+footer a:hover{
+  text-decoration:none !important;
+}
+
+.youtube-video{
+}
+
+
+/* ---------------- ANIMATIONS ------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+
+.imageRot {
+   -webkit-animation:spin 1s ease-in-out;
+    -moz-animation:spin 1s ease-in-out;
+    animation:spin 1s ease-in-out;
+}
+@-moz-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+@keyframes spin {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+
+.movement {
+  -webkit-animation:movement 10s ease-in-out infinite;
+  -moz-animation:movement 10s ease-in-out infinite;
+  animation:movement 10s ease-in-out infinite;
+
+}
+@-moz-keyframes movement {
+    0% { margin-top: 0; margin-left: 0;}
+    25% { margin-top: -20px; margin-left: -20px;}
+    50% { margin-top: 30px; margin-left: 30px;}
+    100% { margin-top: 0; margin-left: 0;}
+}
+@-webkit-keyframes movement {
+  0% { margin-top: 0; margin-left: 0;}
+  25% { margin-top: -20px; margin-left: -20px;}
+  50% { margin-top: 30px; margin-left: 30px;}
+  100% { margin-top: 0; margin-left: 0;}
+}
+@keyframes movement {
+  0% { margin-top: 0; margin-left: 0;}
+  25% { margin-top: -20px; margin-left: -20px;}
+  50% { margin-top: 30px; margin-left: 30px;}
+  100% { margin-top: 0; margin-left: 0;}
+}
+
+.movement_bg {
+  -webkit-animation:movementbg 10s ease-in-out infinite;
+  -moz-animation:movementbg 10s ease-in-out infinite;
+  animation:movementbg 10s ease-in-out infinite;
+
+}
+@-moz-keyframes movementbg {
+    0% { background-position-y: top; background-position-x: 0;}
+    33% { background-position-y: -20px; background-position-x: 40px;}
+    66% { background-position-y: -40px; background-position-x: 10px;}
+    100% { background-position-y: top; background-position-x: 0;}
+}
+@-webkit-keyframes movementbg {
+  0% { background-position-y: top; background-position-x: 0;}
+  33% { background-position-y: -20px; background-position-x: 40px;}
+  66% { background-position-y: -40px; background-position-x: 10px;}
+  100% { background-position-y: top; background-position-x: 0;}
+}
+@keyframes movementbg {
+  0% { background-position-y: top; background-position-x: 0;}
+  33% { background-position-y: -20px; background-position-x: 40px;}
+  66% { background-position-y: -40px; background-position-x: 10px;}
+  100% { background-position-y: top; background-position-x: 0;}
+}
+
 
 
 /* -------------------------------------------------------------------------------------------------------
@@ -453,6 +559,17 @@ hr{
   .plan-list{
     border-radius: 35px;
     margin: 40px 0;
+  }
+
+  .banner-heading{
+    font-size: 1.5em;
+    padding-top: 130px;
+  }
+
+  .youtube-video{
+    width: 90%;
+    height: 500px;
+    margin-top: 50px;
   }
 
 }

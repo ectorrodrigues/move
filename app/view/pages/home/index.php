@@ -1,16 +1,16 @@
 
 <div class="container-fluid">
   <div class="row justify-content-center py-lg-3">
-    <div class="col-lg-10 col-12">
+    <div class="col-lg-10 col-12 mt-5">
 
-      <h1 class="text-center mt-2 mb-5">Planos</h1>
+      <h1 class="text-center mt-5 mb-4">Planos</h1>
 
       <div class="row justify-content-center py-lg-3 mb-5">
 
         <loop><sql>table=plans;where=id = '1';</sql>
-          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-2 my-lg-0 my-5">
+          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-3 my-lg-0 my-5">
               <div>
-                <h2>{title}</h2>
+                <h2 class="color-watermelon">{title}</h2>
               </div>
               <div class="text-left mt-4 pl-lg-0 pl-4 description-list">
                 {description}
@@ -38,9 +38,9 @@
 
 
         <loop><sql>table=plans;where=id = '2';</sql>
-          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-2 my-lg-0 my-5">
+          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-3 my-lg-0 my-5">
               <div>
-                <h2>{title}</h2>
+                <h2 class="color-watermelon">{title}</h2>
               </div>
               <div class="text-left mt-4 pl-lg-0 pl-4 description-list">
                 {description}
@@ -67,9 +67,9 @@
         </loop>
 
         <loop><sql>table=plans;where=id = '6';</sql>
-          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-2 my-lg-0 my-5">
+          <div class="col-lg-3 col-10 text-center transition box-home py-4 px-lg-0 px-5 mx-3 my-lg-0 my-5">
               <div>
-                <h2>{title}</h2>
+                <h2 class="color-watermelon">{title}</h2>
               </div>
               <div class="text-left mt-4 pl-lg-0 pl-4 description-list">
                 {description}

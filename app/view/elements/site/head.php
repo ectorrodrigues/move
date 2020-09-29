@@ -32,16 +32,19 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <!-- AOS Scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <!-- Icons -->
     <link rel="shortcut icon" href="<?=FILES_DIR ?>favicon.ico" type="image/x-icon">
     <link rel="icon"  href="<?=FILES_DIR ?>favicon.ico" type="image/x-icon">
 
+    <!-- AOS Scroll
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    -->
+
     <link rel="canonical" href="https://movedl.com/">
 
     <title>MOVE</title>
+
+    <?php $test = '<p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>'; ?>
 
   </head>

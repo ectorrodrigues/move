@@ -6,8 +6,8 @@
         <div class="col-lg-6 text-center">
 
           <loop><sql>table=plans;where= id = '<?= $_GET['id']?>' ;</sql>
-            <div>
-              <h1>{title}</h1>
+            <div class="bg-color-watermelon px-3 py-lg-2 pt-0 pb-1 mb-1">
+              <h1 class="text-white py-lg-0 py-3">{title}</h1>
             </div>
 
             <div class="text-center pt-lg-3 pb-lg-4 py-5 plan-list">
@@ -18,7 +18,7 @@
               </ul>
             </div>
 
-            <div class="">
+            <div class="form-item">
               <form class="text-left" action="../../../new_account.php" method="post" enctype="multipart/form-data">
 
                 <input type="hidden" name="plan" value="<?=$_GET['id']?>">

@@ -209,7 +209,7 @@ $get_result 	= array();
 
 function construct_page($page, $archive){
 
-	global $response;
+	  global $response;
     global $id;
     global $get_to_replace;
     global $get_result;
@@ -217,22 +217,22 @@ function construct_page($page, $archive){
 
     $site   = explode('/', $_SERVER['PHP_SELF']);
     $path   = SERVER_DIR.PAGES_DIR.$page.DS;
+    $complement = '?page=';
 
-
-
-
+    if($archive == 'top.php' || $archive == 'footer.php'){
+      $path = SERVER_DIR.ELEMENTS_DIR;
+    }
 
     if($archive == 'item.php'){
         $id = '&id='.$id;
-    }  else {
+    } else {
         $id = '';
     }
 
-    //echo $path.$archive.'?page='.$page.$id;
+	$file 	= $path.$archive.$complement.$page.$id;
 
-	$file 	= $path.$archive.'?page='.$page.$id;
+  //echo $file; die();
 
-  //echo '<p><br><br><br><br></p>'.$file; die();
 	load($file, '');
 
 
@@ -587,7 +587,7 @@ function keyword($str){
     $str = ", $title,  ".clientname($client);
   }
   return $str;
-}
+} //endfunction
 
 function clientname($str){
   $conn = db();
@@ -597,7 +597,7 @@ function clientname($str){
   $str = strtoupper($str);
 
   return strtoupper($str);
-}
+} //endfunction
 
 function webpconvert($str){
   $extension = explode(".",$str);
@@ -606,14 +606,14 @@ function webpconvert($str){
     $str = substr($str, 0, -4) . '.webp';
   }
   return $str;
-}
+} //endfunction
 
 function webporiginal($str){
   $extension = explode(".",$str);
   $extension = $extension[1];
   $str = substr($str, 0, -4) . '.'.$extension;
   return $str;
-}
+} //endfunction
 
 $key_sk = random_bytes(32);
 $key_siv = random_bytes(32);
@@ -633,7 +633,7 @@ function encrypting($action, $string, $key_sk, $key_siv){
     $output = openssl_decrypt($output, $cypher_method, $key, 0, $iv);
   }
   return $output;
-}
+} //endfunction
 
 
 function plans_months($str){
@@ -655,7 +655,7 @@ function plans_months($str){
     $monthsarray_key++;
   }
   return $return;
-}
+} //endfunction
 
 function check_months($str){
   if($str > 1){
@@ -664,6 +664,6 @@ function check_months($str){
     $str = $str.' mês';
   }
   return $str;
-}
+} //endfunction
 
 ?>
