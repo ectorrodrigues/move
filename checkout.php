@@ -45,7 +45,7 @@ if($status == '3'){
 
   $updated == date("Y-m-d");
 
-  $query 	= $conn->prepare("UPDATE users SET active = '1', plan_id = '$id_item', updated = '$updated' WHERE reference = '$reference' ");
+  $query 	= $conn->prepare("UPDATE users SET active = '1', plan_id = '9', updated = '$updated' WHERE reference = '$reference' ");
   $query->execute();
 
   // DECRYPTING PASSWORD
