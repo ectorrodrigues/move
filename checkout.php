@@ -28,6 +28,7 @@ $resultado2 = curl_exec($curl);
 curl_close($curl);
 $status = simplexml_load_string($resultado2)->status;
 $reference = simplexml_load_string($resultado2)->reference;
+$id_item = simplexml_load_string($resultado2)->id;
 
 // GET USER DATA
 foreach($conn->query("SELECT * FROM users WHERE reference = '$reference' ") as $row) {
@@ -42,7 +43,9 @@ foreach($conn->query("SELECT * FROM users WHERE reference = '$reference' ") as $
 // PAYMENT STATUS CONDITIONAL
 if($status == '3'){
 
-  $query 	= $conn->prepare("UPDATE users SET active = '1' WHERE reference = '$reference' ");
+  $updated == date("Y-m-d");
+
+  $query 	= $conn->prepare("UPDATE users SET active = '1', plan_id = '$id_item', updated = '$updated' WHERE reference = '$reference' ");
   $query->execute();
 
   // DECRYPTING PASSWORD
