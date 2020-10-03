@@ -5,50 +5,90 @@
   include 'app/config/config.php';
   include 'app/model/AppModel.php';
 
-  // GET THE POSTS
-  $plan     = $_POST['plan'];
-  $name     = $_POST['name'];
-  $username = $_POST['username'];
-  $email    = $_POST['email'];
-  $ddd      = $_POST['ddd'];
-  $phone    = $_POST['phone'];
-  $password = $_POST['password'];
+  // OPEN DATABASE CONNECTION
+  $conn = db();
 
   // FORMAT PHONE
   function phoneformat($str){
-  	$phoneformated = array( ' '=>'', '.'=>'', '('=>'', ')'=>'', '-'=>'' );
+    $phoneformated = array( ' '=>'', '.'=>'', '('=>'', ')'=>'', '-'=>'' );
     $phoneformated = strtr( $str, $phoneformated );
-  	return $phoneformated;
+    return $phoneformated;
   }
-  $ddd   = phoneformat($ddd);
-  $phone = phoneformat($phone);
 
-  // CREATE THE REFERENCE ID
-  $reference = date("Ymdhms").uniqid();
+  if(!empty($_GET['action'])){
 
-  //GET PLAN DATA FROM DATABASE
-  $conn = db();
-  foreach($conn->query("SELECT * FROM plans WHERE id = '$plan' ") as $row) {
-		$title		= $row['title'];
-    $price		= $row['price'];
-	}
+    if($_GET['action'] == 'update'){
+      // GET THE GETS
+      $reference = $_GET['reference'];
+      $plan = $_GET['plan'];
+      //GET PLAN DATA
+      foreach($conn->query("SELECT * FROM plans WHERE id = '$plan' ") as $row) {
+        $title		= $row['title'];
+        $price		= $row['price'];
+    	}
+      // GET USER DATA
+      foreach($conn->query("SELECT * FROM users WHERE reference = '$reference' ") as $row) {
+        $name		= $row['title'];
+        $ddd		= $row['ddd'];
+        $phone  = $row['phone'];
+    	}
+      $ddd   = phoneformat($ddd);
+      $phone = phoneformat($phone);
+    }
 
-  // GET DATE
-  $created = date("Y-m-d");
+  } else {
 
-  // HASH PASSWORD
-  //generatekeys();
-  $crypted_password = encrypting("encrypt", $password, $key_sk, $key_siv);
+    // GET THE POSTS
+    $plan     = $_POST['plan'];
+    $name     = $_POST['name'];
+    $username = $_POST['username'];
+    $email    = $_POST['email'];
+    $ddd      = $_POST['ddd'];
+    $phone    = $_POST['phone'];
+    $password = $_POST['password'];
+    $ddd   = phoneformat($ddd);
+    $phone = phoneformat($phone);
 
-  // CREATE USER IN DATABASE
-  $conn = db();
-  $sql = "INSERT INTO users (username, title, email, password, keypass, key_iv, key_tag, plan_id, created, updated, reference, active) VALUES('$username', '$name', '$email', '$crypted_password', '$crypted_password', '$key_siv', '$key_sk', '$plan', '$created', '$created', '$reference' ,'0')" ;
-  $query = $conn->prepare($sql);
-  $query->execute();
+    // CREATE THE REFERENCE ID
+    $reference = date("Ymdhms").uniqid();
 
-  echo "new<br>$crypted_password<br>$key_sk"; die();
+    //GET PLAN DATA FROM DATABASE
+    foreach($conn->query("SELECT * FROM plans WHERE id = '$plan' ") as $row) {
+  		$title		= $row['title'];
+      $price		= $row['price'];
+  	}
 
-  //GET THE PAGSEGURO CREDENTIALS
+    // GET DATE
+    $created = date("Y-m-d");
+
+    // HASH PASSWORD
+    //generatekeys();
+    $crypted_password = encrypting("encrypt", $password, $key_sk, $key_siv);
+    $active = '0';
+
+    // CREATE USER IN DATABASE
+
+    $sql = "INSERT INTO users (username, title, email, ddd, phone, password, keypass, key_iv, key_tag, plan_id, created, updated, reference, active) VALUES (':username', ':name', ':email', ':ddd', ':phone', ':crypted_password', ':crypted_keypass', ':key_siv', ':key_sk', ':plan', ':created', ':updated', ':reference', ':active')" ;
+    $query = $conn->prepare($sql);
+    $query->bindParam(':username', $username);
+    $query->bindParam(':name', $name);
+    $query->bindParam(':email', $email);
+    $query->bindParam(':ddd', $ddd);
+    $query->bindParam(':phone', $phone);
+    $query->bindParam(':crypted_password', $crypted_password);
+    $query->bindParam(':crypted_keypass', $crypted_password);
+    $query->bindParam(':key_siv', $key_siv);
+    $query->bindParam(':key_sk', $key_sk);
+    $query->bindParam(':plan', $plan);
+    $query->bindParam(':created', $created);
+    $query->bindParam(':updated', $created);
+    $query->bindParam(':reference', $reference);
+    $query->bindParam(':active', $active);
+    $query->execute();
+
+  }
+
+  // GET THE PAGSEGURO CREDENTIALS
   $query	= $conn->prepare("SELECT content FROM config WHERE title = 'pagseguro_email'");
   $query->execute();
   $pagseguro_email = $query->fetchColumn();
@@ -71,7 +111,7 @@
         "senderName" => "$name",
         "senderAreaCode" => "$ddd",
         "senderPhone" => "$phone",
-        "senderEmail" => "c26281648080944450330@sandbox.pagseguro.com.br",
+        "senderEmail" => "compradorteste@sandbox.pagseguro.com.br",
         "shippingAddressRequired" => "false",
         "extraAmount" => "0.00"
   );
@@ -79,7 +119,9 @@
   curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($credenciais));
+  //curl_setopt($ch, CURLOPT_FAILONERROR, true);
   $resultado = curl_exec($curl);
+
   curl_close($curl);
   $checkoutcode = simplexml_load_string($resultado)->code;
 

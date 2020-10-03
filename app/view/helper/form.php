@@ -23,7 +23,11 @@
   $query->execute();
   $table_fields = $query->fetchAll(PDO::FETCH_COLUMN);
 
-  $ignore = array('key_iv', 'key_tag', 'reference');
+  $ignore = array('key_iv', 'key_tag', 'created', 'active');
+
+  foreach($conn->query("SELECT reference FROM ".$title." WHERE id = '".$item."' ") as $row_reference) {
+    $reference    = $row_reference['reference'];
+  }
 
 
   foreach($table_fields as $field) {
@@ -52,12 +56,13 @@
       }
 
       if(in_array($field, $array_fields_hidden, TRUE)){
+        if($field == 'updated'){
+          $value = date("Y-m-d");
+        }
         $inputs  .= '<input type="hidden" name="'.$field.'" value="'.$value.'" />';
       }
 
       elseif(in_array($field, $array_fields_text, TRUE)){
-
-
 
         if($field == 'plan_id'){
           foreach($conn->query("SELECT title FROM plans WHERE id = '".$value."' ") as $row) {
@@ -69,7 +74,7 @@
                       </h1>
                       <div class="text-center mb-4">
                         <strong>
-                        <a href="'.ROOT.'">
+                        <a href="'.ROOT.'upgrade/item/'.$reference.'/upgrade-account">
                           Fazer Upgrade
                         </a>
                         </strong>
@@ -133,9 +138,7 @@
       }
 
       elseif(in_array($field, $array_fields_date, TRUE)){
-
         $inputs  .= '<label>'.$label.':</label><input type="date" name="'.$field.'" value="'.date("Y-m-d", strtotime($value)).'" />';
-
       }
 
       elseif(in_array($field, $array_fields_password, TRUE)){
@@ -250,6 +253,7 @@
 $( document ).ready(function() {
     $('body').css('background', '#fff');
     $('.menu_admin div a i').css('color', '#333');
+    $( "body" ).css('background', '#fff');
 });
 </script>
 

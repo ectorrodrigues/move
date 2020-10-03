@@ -8,7 +8,6 @@ include 'app/config/database.php';
 include 'app/config/config.php';
 include 'app/model/AppModel.php';
 
-/*
 $conn = db();
 
 // GET THE PAGSEGURO CREDENTIALS
@@ -29,11 +28,6 @@ $resultado2 = curl_exec($curl);
 curl_close($curl);
 $status = simplexml_load_string($resultado2)->status;
 $reference = simplexml_load_string($resultado2)->reference;
-*/
-
-
-$reference = '202009240709385f6c2ec2c4236';
-$status = '3';
 
 // GET USER DATA
 foreach($conn->query("SELECT * FROM users WHERE reference = '$reference' ") as $row) {
@@ -53,7 +47,6 @@ if($status == '3'){
 
   // DECRYPTING PASSWORD
   $decrypted_password = encrypting("decrypt", $password, $tag, $iv);
-  echo $decrypted_password; die();
 
   $email = $emailuser;
   $subject = 'Move - Ativação de Conta';

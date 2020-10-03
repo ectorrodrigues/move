@@ -1,1 +1,1 @@
-<a href="<?=SERVER_DIR?>admin" class="transition btn">acessar conta</a>
+<a href="<?=SERVER_DIR?>admin" class="transition btn access">acessar conta</a>

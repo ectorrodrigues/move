@@ -7,7 +7,7 @@
 			</div>
 		</div>
 
-  <div class="row justify-content-center pt-lg-1 pt-2 pb-5 h-100" id="content">
+  <div class="row justify-content-center pt-lg-1 pt-2 pb-5 h-100 text-white" id="content">
     <div class="col-lg-6 col-10 py-5 my-auto align-self-center">
 
       <form action="" method="post" enctype="multipart/form-data" id="form">

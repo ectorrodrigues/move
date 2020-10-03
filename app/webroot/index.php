@@ -43,4 +43,8 @@
 		construct_page($pagetop, 'footer.php');
 	?>
 
+	<script>
+		AOS.init();
+	</script>
+
 </body>

@@ -131,7 +131,11 @@
 		$query->execute();
 		$table_fields = $query->fetchAll(PDO::FETCH_COLUMN);
 
+		$ignore = array('key_iv', 'key_tag', 'reference', 'created', 'plan_id', 'active');
+
 		foreach($table_fields as $field) {
+
+		if(!in_array($field, $ignore)){
 
 			if($field == "id"){
 				$id		 = $_POST[$field];
@@ -172,6 +176,7 @@
 			}
 
 		}
+	}
 
 		$query 	= $conn->prepare("SELECT id FROM cms WHERE title = '".$table."'");
 		$query->execute();
@@ -214,6 +219,8 @@
 
 		}
 
+
+
 	}
 
 
@@ -245,6 +252,6 @@
 	$conn=null;
 
 
-	header('Location:'. SERVER_DIR . ADMIN . $_GET['id']);
+	header('Location:'. SERVER_DIR . ADMIN . 'edit/' . $_GET['id'] . '/0');
 
 ?>

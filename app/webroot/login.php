@@ -31,7 +31,7 @@
              </div>
 
              <div class="text-center mt-1">
-   						<button type="submit" class="btn text-center submit transition">Entrar</button>
+   						<button type="submit" class="btn text-center submit-login transition">Entrar</button>
    					</div>
 
 		      </form>

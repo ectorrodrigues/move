@@ -2,7 +2,11 @@
 	require (ELEMENTS_DIR .'head.php');
 ?>
 
-<body>
+<body class="admin">
+
+	<script type="text/javascript">
+		$( "body" ).css('background', 'linear-gradient(45deg, rgba(44,39,76,1) 0%, rgba(255,0,97,0.9962359943977591) 100%)');
+	</script>
 
 <main>
 	<div class="container-fluid">
@@ -105,4 +109,5 @@
 ?>
 		</div>
 	</main>
+
 </body>
