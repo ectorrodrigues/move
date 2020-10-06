@@ -93,8 +93,6 @@
   $query->execute();
   $pagseguro_email = $query->fetchColumn();
 
-  echo $pagseguro_email; die();
-
   $query	= $conn->prepare("SELECT content FROM config WHERE title = 'pagseguro_token'");
   $query->execute();
   $pagseguro_token = $query->fetchColumn();
@@ -102,17 +100,17 @@
   // GET THE PAGSEGURO CHECKOUT TRANSACTION CODE
   $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/checkout";
   $credenciais = array(
-        "email" => "$pagseguro_email",
-        "token" => "$pagseguro_token",
+        "email" => "".$pagseguro_email."",
+        "token" => "".$pagseguro_token."",
         "currency" => "BRL",
-        "itemId1" => "$plan",
-        "itemDescription1" => "$title",
-        "itemAmount1" => "$price",
+        "itemId1" => "".$plan."",
+        "itemDescription1" => "".$title."",
+        "itemAmount1" => "".$price."",
         "itemQuantity1" => "1",
-        "reference" => "$reference",
-        "senderName" => "$name",
-        "senderAreaCode" => "$ddd",
-        "senderPhone" => "$phone",
+        "reference" => "".$reference."",
+        "senderName" => "".$name."",
+        "senderAreaCode" => "".$ddd."",
+        "senderPhone" => "".$phone."",
         "senderEmail" => "c26281648080944450330@sandbox.pagseguro.com.br",
         "shippingAddressRequired" => "false",
         "extraAmount" => "0.00"
