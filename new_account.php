@@ -67,7 +67,7 @@
     $active = '0';
 
     // CREATE USER IN DATABASE
-    
+
     $sql = "INSERT INTO users (username, title, email, ddd, phone, password, keypass, key_iv, key_tag, plan_id, created, updated, reference, active) VALUES (:username, :name, :email, :ddd, :phone, :crypted_password, :crypted_keypass, :key_siv, :key_sk, :plan, :created, :updated, :reference, :active)" ;
     $query = $conn->prepare($sql);
     $query->bindParam(':username', $username);
@@ -111,7 +111,7 @@
         "senderName" => "$name",
         "senderAreaCode" => "$ddd",
         "senderPhone" => "$phone",
-        "senderEmail" => "c26281648080944450330@sandbox.pagseguro.com.br",
+        "senderEmail" => "teste@sandbox.pagseguro.com.br",
         "shippingAddressRequired" => "false",
         "extraAmount" => "0.00"
   );
