@@ -36,6 +36,8 @@
     if($field == 'title'){ $label = 'Nome'; }
     if($field == 'username'){ $label = 'username'; }
     if($field == 'email'){ $label = 'E-mail'; }
+    if($field == 'ddd'){ $label = 'ddd'; }
+    if($field == 'phone'){ $label = 'Telefone'; }
     if($field == 'password'){ $label = 'Senha'; }
     if($field == 'keypass'){ $label = 'Confirme a senha'; }
     if($field == 'plan_id'){ $label = 'Plano'; }
