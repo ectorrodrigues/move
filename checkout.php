@@ -28,7 +28,7 @@ $resultado2 = curl_exec($curl);
 curl_close($curl);
 $status = simplexml_load_string($resultado2)->status;
 $reference = simplexml_load_string($resultado2)->reference;
-$id_item = simplexml_load_string($resultado2)->id;
+$id_item = simplexml_load_string($resultado2)->items->item->id;
 
 // GET USER DATA
 foreach($conn->query("SELECT * FROM users WHERE reference = '$reference' ") as $row) {
