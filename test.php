@@ -1,28 +1,19 @@
 <?php
 
+$pagseguro_email = 'movedeeplink@gmail.com';
+$pagseguro_token = 'DB01CE92BEBF4455A0CE1ABDD9FCF901';
 
-require_once "app/vendors/sodium_compat/autoload.php";
+$url = "https://ws.sandbox.pagseguro.uol.com.br/v3/transactions/notifications/$code?email=$pagseguro_email&token=$pagseguro_token";
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$resultado2 = curl_exec($curl);
+curl_close($curl);
+$full = simplexml_load_string($resultado2);
+$status = simplexml_load_string($resultado2)->status;
+$reference = simplexml_load_string($resultado2)->reference;
+$id_item = simplexml_load_string($resultado2)->id;
 
-
-$password = 'testpassword';
-
-
-$storeInDatabase = sodium_crypto_pwhash_str(
-    $password,
-    SODIUM_CRYPTO_PWHASH_OPSLIMIT_INTERACTIVE,
-    SODIUM_CRYPTO_PWHASH_MEMLIMIT_INTERACTIVE
-);
-
-/* Once that's stored, you can just test against the hash like so: */
-if (sodium_crypto_pwhash_str_verify($storeInDatabase, $password)) {
-  include 'app/config/database.php';
-  $conn   = db();
-  $query  = $conn->prepare("INSERT INTO test (title) VALUES ('$storeInDatabase') ");
-  $query->execute();
-} else {
-    echo 'erro';
-}
-
-
+echo $full;
 
 ?>
