@@ -1,5 +1,6 @@
 <?php
 
+$code = '9CB38DADFF6CFF6C4B3774555F8C76A1A331';
 $pagseguro_email = 'movedeeplink@gmail.com';
 $pagseguro_token = 'DB01CE92BEBF4455A0CE1ABDD9FCF901';
 
