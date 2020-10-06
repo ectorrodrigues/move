@@ -67,8 +67,8 @@
     $active = '0';
 
     // CREATE USER IN DATABASE
-
-    $sql = "INSERT INTO users (username, title, email, ddd, phone, password, keypass, key_iv, key_tag, plan_id, created, updated, reference, active) VALUES (':username', ':name', ':email', ':ddd', ':phone', ':crypted_password', ':crypted_keypass', ':key_siv', ':key_sk', ':plan', ':created', ':updated', ':reference', ':active')" ;
+    
+    $sql = "INSERT INTO users (username, title, email, ddd, phone, password, keypass, key_iv, key_tag, plan_id, created, updated, reference, active) VALUES (:username, :name, :email, :ddd, :phone, :crypted_password, :crypted_keypass, :key_siv, :key_sk, :plan, :created, :updated, :reference, :active)" ;
     $query = $conn->prepare($sql);
     $query->bindParam(':username', $username);
     $query->bindParam(':name', $name);
