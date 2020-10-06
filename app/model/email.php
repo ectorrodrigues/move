@@ -21,7 +21,7 @@
    $mail->addReplyTo('contato@movedl.com');
    $mail->isHTML(true);                                  // Set email format to HTML
 
-   $mail->Subject = 'Move - Dados de Acesso';
+   $mail->Subject = 'Move - Sua Conta';
    $mail->Body    = $content;
 
    if(!$mail->send()) {
