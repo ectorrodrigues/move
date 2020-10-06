@@ -15,6 +15,6 @@ $status = simplexml_load_string($resultado2)->status;
 $reference = simplexml_load_string($resultado2)->reference;
 $id_item = simplexml_load_string($resultado2)->id;
 
-var_dump($full);
+print_r($full);
 
 ?>
