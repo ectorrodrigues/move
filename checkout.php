@@ -52,7 +52,7 @@ if($status == '3'){
   $decrypted_password = encrypting("decrypt", $password, $tag, $iv);
 
   $email = $emailuser;
-  $subject = 'Move - Ativação de Conta';
+  $subject = 'Move Ativação de Conta';
   $content = '
   <html lang="en" dir="ltr">
     <head>
@@ -104,7 +104,7 @@ if($status == '3'){
 } else {
 
   $email = $emailuser;
-  $subject = 'Move - Conta Inativa';
+  $subject = 'Move Conta Inativa';
 
   $content = '
   <html lang="en" dir="ltr">
