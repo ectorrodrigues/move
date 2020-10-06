@@ -43,7 +43,7 @@ foreach($conn->query("SELECT * FROM users WHERE reference = '$reference' ") as $
 // PAYMENT STATUS CONDITIONAL
 if($status == '3'){
 
-  $updated == date("Y-m-d");
+  $updated = date("Y-m-d");
 
   $query 	= $conn->prepare("UPDATE users SET active = '1', plan_id = '$id_item', updated = '$updated' WHERE reference = '$reference' ");
   $query->execute();
