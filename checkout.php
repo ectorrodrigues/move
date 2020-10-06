@@ -1,7 +1,7 @@
 <?php
 
 // GET THE NOTIFICATION CODE
-//$code = $_POST['notificationCode'];
+$code = $_POST['notificationCode'];
 
 // INCLUDES
 include 'app/config/database.php';
