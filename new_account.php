@@ -111,7 +111,7 @@
         "senderName" => "$name",
         "senderAreaCode" => "$ddd",
         "senderPhone" => "$phone",
-        "senderEmail" => "teste@sandbox.pagseguro.com.br",
+        "senderEmail" => "c26281648080944450330@sandbox.pagseguro.com.br",
         "shippingAddressRequired" => "false",
         "extraAmount" => "0.00"
   );
