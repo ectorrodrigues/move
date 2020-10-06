@@ -17,4 +17,8 @@ $id_item = simplexml_load_string($resultado2)->id;
 
 print_r($full);
 
+echo '<br><br><br><br>';
+
+print_r($id_item);
+
 ?>
