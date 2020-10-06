@@ -2,10 +2,9 @@
 
   $test = $_SESSION['login'];
 
-  foreach($conn->query("SELECT SUM(clicks) AS TotalClicks FROM links WHERE id = '$test' ") as $row) {
-    $totalclicks = $row['TotalClicks'];
-  }
-
+  $query  = $conn->prepare("SELECT SUM(clicks) AS TotalClicks FROM links WHERE id = '$test' ");
+  $query->execute();
+  $totalclicks = $query->fetchColumn();
 
   echo '<h1 class="py-lg-3 pb-5 pt-3 mt-lg-0 mt-5 text-dark">links</h1>';
 
