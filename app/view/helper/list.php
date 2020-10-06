@@ -1,10 +1,20 @@
 <?php
 
+  $test = $_SESSION['login'];
+
+  foreach($conn->query("SELECT SUM(clicks) AS TotalClicks FROM links WHERE id = '$test' ") as $row) {
+    $totalclicks = $row['TotalClicks'];
+  }
+
+
   echo '<h1 class="py-lg-3 pb-5 pt-3 mt-lg-0 mt-5 text-dark">links</h1>';
 
   echo '
     <div class="row text-dark">
-      <div class="col-12 text-right filters">
+    <div class="col-6 text-left filters">
+      '.$totalclicks.'/1000 clicks
+    </div>
+      <div class="col-6 text-right filters">
         Filtrar:<span class="separator">|</span><span class="filter_all" onclick="filter(\'filter_all\')">Tudo</span>
                 <span class="separator">|</span>
                 <span class="filter_ig" onclick="filter(\'filter_instagram\')"><i class="fab fa-instagram"></i></span>
@@ -14,7 +24,7 @@
     </div>
   ';
 
-  $test = $_SESSION['login'];
+
 
   $query  = $conn->prepare("SELECT username FROM users WHERE id = '$test' ");
   $query->execute();
