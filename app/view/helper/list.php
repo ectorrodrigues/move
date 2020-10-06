@@ -2,7 +2,7 @@
 
   $test = $_SESSION['login'];
 
-  $query  = $conn->prepare("SELECT SUM(clicks) AS TotalClicks FROM links WHERE id = '$test' ");
+  $query  = $conn->prepare("SELECT SUM(clicks) AS TotalClicks FROM links WHERE user_id = '$test' ");
   $query->execute();
   $totalclicks = $query->fetchColumn();
 
