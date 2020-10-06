@@ -13,7 +13,7 @@ curl_close($curl);
 $full = simplexml_load_string($resultado2);
 $status = simplexml_load_string($resultado2)->status;
 $reference = simplexml_load_string($resultado2)->reference;
-$id_item = simplexml_load_string($resultado2)->item->id;
+$id_item = simplexml_load_string($resultado2)->items->item->id;
 
 print_r($full);
 
