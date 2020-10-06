@@ -128,8 +128,8 @@
   $conn = null;
 
   //SEND TO PAGSEGURO CHECKOUT PAGE
-  //header("Location:https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=$checkoutcode");
+  header("Location:https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=$checkoutcode");
 
-  //*/
+  
 
 ?>
