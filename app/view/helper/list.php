@@ -6,14 +6,22 @@
   $query->execute();
   $totalclicks = $query->fetchColumn();
 
+  $query  = $conn->prepare("SELECT plan_id FROM users WHERE id = '$test' ");
+  $query->execute();
+  $plan_id_fetch = $query->fetchColumn();
+
+  $query  = $conn->prepare("SELECT links_limit FROM plans WHERE id = '$plan_id_fetch' ");
+  $query->execute();
+  $limitclicks = $query->fetchColumn();
+
   echo '<h1 class="py-lg-3 pb-5 pt-3 mt-lg-0 mt-5 text-dark">links</h1>';
 
   echo '
     <div class="row text-dark">
-    <div class="col-6 text-left filters">
-      '.$totalclicks.'/1000 clicks
+    <div class="col-lg-6 col-12 text-left filters mb-lg-0 mb-4">
+      '.number_format($totalclicks,0,",",".").'/<strong>'.number_format($limitclicks,0,",",".").'</strong> clicks
     </div>
-      <div class="col-6 text-right filters">
+      <div class="col-lg-6 col-12 text-right filters">
         Filtrar:<span class="separator">|</span><span class="filter_all" onclick="filter(\'filter_all\')">Tudo</span>
                 <span class="separator">|</span>
                 <span class="filter_ig" onclick="filter(\'filter_instagram\')"><i class="fab fa-instagram"></i></span>
@@ -47,7 +55,7 @@
 
         <div class="row">
           <div class="col-12">
-            <h2><font size="-1">::</font> '.$title.'</h2>
+            <h2><i class="fas fa-link color-watermelon" style="font-size:0.75em;"></i> '.$title.'</h2>
           </div>
         </div>
         <div class="row">
