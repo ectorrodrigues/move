@@ -93,6 +93,8 @@
   $query->execute();
   $pagseguro_email = $query->fetchColumn();
 
+  echo $pagseguro_email; die();
+
   $query	= $conn->prepare("SELECT content FROM config WHERE title = 'pagseguro_token'");
   $query->execute();
   $pagseguro_token = $query->fetchColumn();
@@ -128,7 +130,7 @@
   $conn = null;
 
   //SEND TO PAGSEGURO CHECKOUT PAGE
-  header("Location:https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=$checkoutcode");
+  //header("Location:https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=$checkoutcode");
 
   //*/
 
