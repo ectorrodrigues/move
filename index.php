@@ -213,6 +213,7 @@ include('app/model/AppModel.php');
 				if (!isset($_SESSION['login'])) {
 					include (WEBROOT_DIR . 'login.php');
 				} else {
+					$user_id = $_SESSION['login'];
 					include (WEBROOT_DIR . 'admin.php');
 				}
 

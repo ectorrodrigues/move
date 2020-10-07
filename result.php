@@ -80,8 +80,7 @@ $query->execute();
     }
     ?>
 
-  }
-  else {
+  } else {
 
     <?php
 
@@ -90,14 +89,14 @@ $query->execute();
         echo 'document.location = "https://instagram.com/'.$userlink.'";';
       }
       elseif($socialmedia == 'facebook'){
-        echo 'document.location = "fb://profile/'.$userlink.'";';
+        echo 'document.location = "https://www.facebook.com/'.$userlink.'";';
       }
     } else {
       echo 'document.write("'.$error_message.'");';
     }
 
     ?>
-}
+  }
 </script>
 
 </div>
