@@ -70,7 +70,7 @@ $query->execute();
 
     if($continue == 'yes'){
       if($socialmedia == 'instagram'){
-        echo 'document.location = "instagram://user?username='.$userlink.'";';
+        echo 'document.location = "instagram://'.$userlink.'";';
       }
       elseif($socialmedia == 'facebook'){
         echo 'document.location = "fb://profile/'.$userlink.'";';

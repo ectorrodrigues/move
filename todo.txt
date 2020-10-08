@@ -1,0 +1,4 @@
+07/10/2020
+Storar o código do post junto com o media_id do istagram, pra poder direcionar o usuário (no result.php) do navegador pro link correto tbm. Só o media_id já está funcionando, mas só para celular.
+
+--------------------

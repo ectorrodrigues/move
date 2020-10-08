@@ -38,10 +38,21 @@
 							if(strpos($link, 'instagram.com') == false){
 								$query->bindParam(':link', $link);
 							}else{
-								$link_exploded = explode('/', $link);
-								$link_exploded = $link_exploded[3];
+								$link_exploded_original = explode('/', $link);
+								$link_exploded = $link_exploded_original[3];
 								$link = $link_exploded;
-								echo $link.'<br>';
+
+
+								if($link == 'p'){
+									$api = file_get_contents("http://api.instagram.com/oembed?url=https://www.instagram.com/p/".$link_exploded_original[4]."/");
+									$apiObj = json_decode($api,true);
+									$media_id = $apiObj['media_id'];
+									$link = 'media?id='.$media_id;
+								} else {
+									$link = 'user?username='.$link;
+								}
+
+
 							}
 
             }
